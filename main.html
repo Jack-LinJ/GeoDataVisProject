@@ -1,31 +1,78 @@
-<div class="box">
-    <div class="border_item">
-    </div>
-  </div>
-  
-<div style="display: inline-flex;width:100%;height:100%">
-    <div id="world" style="height: 100%;width: 80%;"></div>
-    <div style="height: 99%;margin: auto;width: 20%;background-color: blue;">
-        <div class="flag">
-            <img id="flag" src="flags/cn.png" alt="" style="width: 80%;height: auto;">
-        </div>
-        <div id="countryName" style="height: 30px;font-size: 25px;margin: 10px;text-align: center;"></div>
-        <div class="profile">
-            <div class="profile-left">
-                <img id="avatar" src="avatar/us.jpg" alt="" style="height:160px;width:120px">
-            </div>
-            <div class="profile-right">
-                <div id="twitter" class="profile-content"></div>
-                <div id="name" class="profile-content"></div>
-                <div id="position" class="profile-content"></div>
-            </div>
-        </div>
-        <div class="information">
 
+<!-- <!DOCTYPE html> -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>推特外交大赏</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>推特外交大赏</h1>
+    </header>
+    
+    <div style="display: inline-flex;width:100%;height:74%">
+        <div style="width: 16%;margin-left: 1%;">
+            <div style="height: 350px;margin-top: 10px;width: 100%;" class="panel">
+                <div class="title-box">
+                    <div class="breathe circle"></div>
+                    <div>国家信息</div>
+                </div>
+                <div class="flag">
+                    <img id="flag" alt="" style="width: 70%;height: auto;">
+                </div>
+                <div id="countryName" style="font-size: 25px;margin: 10px;text-align: center;"></div>
+                <div id="no" class="no" style="font-size: 25px;text-align: center;"></div>
+                <div class="panel-footer"></div>
+            </div>
+    
+    
+            <div style="height: 350px;margin-top: 30px;width: 100%;" class="panel">
+                <div class="title-box">
+                    <div class="breathe circle"></div>
+                    <div>领导人信息</div>
+                </div>
+                <div class="profile">
+                    <div class="profile-left">
+                        <img id="avatar" src="avatar/us.jpg" alt="" style="height:160px;width:120px">
+                    </div>
+                    <div class="profile-right">
+                        <div id="twitter" class="profile-content"></div>
+                        <div id="name" class="profile-content"></div>
+                        <div id="position" class="profile-content"></div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+
+        <div class="map" style="height: 98%;width: 66%;">
+            <div class="map1"></div>
+            <div class="map2"></div>
+            <div class="map3"></div>
+            <div id="world" class="chart" ></div>
+          </div>
+        <!-- <div id="world" style="height: 98%;width: 66%;"></div> -->
+
+        <div style="height: 100%;margin: auto 0px ;width: 16%;" class="panel">
+
+
+            <div class="information">
+
+            </div>
+            <div class="panel-footer"></div>
         </div>
     </div>
-</div>
-<link rel="stylesheet" href="style.css">
+    <div style="display: inline-flex;width:100%;height:26%;"> </div>
+</body>
+
+</html>
+
+
+
 <script src="echarts/echart.js"></script>
 <script type="text/javascript" src="echarts/world.js"></script>
 
@@ -39,15 +86,15 @@
         setOption(id)
     })
 
-    var resetOption = function(){
+    var resetOption = function () {
         let tmp = option.geo.regions;
-        for(let i in tmp){
+        for (let i in tmp) {
             tmp[i].itemStyle.areaColor = '#0d0059'
         }
         option.geo.regions = tmp;
     }
 
-    var setOption = function(id){
+    var setOption = function (id) {
         resetOption()
         option.geo.regions[id].itemStyle.areaColor = 'green';
 
@@ -57,16 +104,17 @@
         document.getElementById('name').innerHTML = country.name
         document.getElementById('position').innerHTML = country.position
         document.getElementById('flag').src = country.flagUrl
+        document.getElementById('no').innerHTML = '影响力排名'+country.no
         // document.getElementById('avatar').src = country.avatarUrl
 
 
-        for(let i in country.follow){
+        for (let i in country.follow) {
             option.geo.regions[country.follow[i]].itemStyle.areaColor = 'red';
         }
-        for(let i in country.follower){
+        for (let i in country.follower) {
             option.geo.regions[country.follower[i]].itemStyle.areaColor = 'black';
         }
-        for(let i in country.mutualFollower){
+        for (let i in country.mutualFollower) {
             option.geo.regions[country.mutualFollower[i]].itemStyle.areaColor = 'pink';
         }
         myChart.setOption(option)
@@ -75,70 +123,76 @@
     // 国家信息列表
     var countryData = [
         {
-            id:0,
-            countryName:'中国',
-            flagUrl:'flags/cn.png',
-            twitter:'@linji',
-            name:'林霁',
-            position:'首相',
-            avatarUrl:'',
-            follow:[2],
-            follower:[3],
-            mutualFollower:[4]
+            id: 0,
+            countryName: '中国',
+            flagUrl: 'flags/cn.png',
+            twitter: '@linji',
+            name: '林霁',
+            position: '首相',
+            avatarUrl: '',
+            follow: [2],
+            follower: [3],
+            mutualFollower: [4],
+            no:1
+
         },
         {
-            id:1,
-            countryName:'美国',
-            flagUrl:'flags/us.png',
-            twitter:'@xxx',
-            name:'登子',
-            position:'总统',
-            avatarUrl:'',
-            follow:[0],
-            follower:[2],
-            mutualFollower:[4]
-        },        {
-            id:2,
-            countryName:'日本',
-            flagUrl:'flags/jp.png',
-            twitter:'@jp',
-            name:'林霁',
-            position:'首相',
-            avatarUrl:'',
-            follow:[0],
-            follower:[1],
-            mutualFollower:[4]
-        },        {
-            id:3,
-            countryName:'俄罗斯',
-            flagUrl:'flags/ru.png',
-            twitter:'@Russia',
-            name:'林霁',
-            position:'首相',
-            avatarUrl:'',
-            follow:[2],
-            follower:[0],
-            mutualFollower:[4]
-        },        {
-            id:4,
-            countryName:'英国',
-            flagUrl:'flags/gb.png',
-            twitter:'@eng',
-            name:'林霁',
-            position:'首相',
-            avatarUrl:'',
-            follow:[2],
-            follower:[3],
-            mutualFollower:[0]
+            id: 1,
+            countryName: '美国',
+            flagUrl: 'flags/us.png',
+            twitter: '@xxx',
+            name: '登子',
+            position: '总统',
+            avatarUrl: '',
+            follow: [0],
+            follower: [2],
+            mutualFollower: [4],
+            no:2
+        }, {
+            id: 2,
+            countryName: '日本',
+            flagUrl: 'flags/jp.png',
+            twitter: '@jp',
+            name: '林霁',
+            position: '首相',
+            avatarUrl: '',
+            follow: [0],
+            follower: [1],
+            mutualFollower: [4],
+            no:3
+        }, {
+            id: 3,
+            countryName: '俄罗斯',
+            flagUrl: 'flags/ru.png',
+            twitter: '@Russia',
+            name: '林霁',
+            position: '首相',
+            avatarUrl: '',
+            follow: [2],
+            follower: [0],
+            mutualFollower: [4],
+            no:4
+        }, {
+            id: 4,
+            countryName: '英国',
+            flagUrl: 'flags/gb.png',
+            twitter: '@eng',
+            name: '林霁',
+            position: '首相',
+            avatarUrl: '',
+            follow: [2],
+            follower: [3],
+            mutualFollower: [0],
+            no:5
         },
     ]
     // 国家id映射
     var country2id = {
-        中国:0,
-        美国:1,
-        日本:2,
-        俄罗斯:3,
-        英国:4
+        中国: 0,
+        美国: 1,
+        日本: 2,
+        俄罗斯: 3,
+        英国: 4
     }
     var dataValue = dealWithData();
     let nameMap = {
@@ -362,17 +416,18 @@
     option = {
         // 图表主标题
         title: {
-            text: '推特外交大赏', // 主标题文本，支持使用 \n 换行
-            //top: 20, // 定位 值: 'top', 'middle', 'bottom' 也可以是具体的值或者百分比
-            left: 'center', // 值: 'left', 'center', 'right' 同上
-            textStyle: { // 文本样式
-                fontSize: 18,
-                fontWeight: 600,
-                color: 'black'
-            }
+            // text: '推特外交大赏', // 主标题文本，支持使用 \n 换行
+            // //top: 20, // 定位 值: 'top', 'middle', 'bottom' 也可以是具体的值或者百分比
+            // top: 20,
+            // left: 'center', // 值: 'left', 'center', 'right' 同上
+            // textStyle: { // 文本样式
+            //     fontSize: 18,
+            //     fontWeight: 600,
+            //     color: 'white'
+            // }
         },
         tooltip: {
-            show:true,
+            show: true,
             trigger: 'item',
             formatter: function (params) {
                 console.log(1)
@@ -399,7 +454,7 @@
             // 定义 在选中范围中 的视觉元素
             inRange: {
                 color: ['#9fb5ea', '#e6ac53', '#74e2ca', '#85daef', '#9feaa5', '#5475f5'], // 图元的颜色
-                show:false
+                show: false
             }
         },
 
@@ -413,7 +468,7 @@
                 normal: {
                     show: false, //关闭省份名展示
                     fontSize: "10",
-                    color: "rgba(0,0,0,0.7)"
+                    color: "rgba(0,0,0,0.6)"
                 },
                 emphasis: {
                     show: false
@@ -428,26 +483,26 @@
                     }
                 },
                 {
-                    name:'美国',
-                    itemStyle:{
+                    name: '美国',
+                    itemStyle: {
                         // areaColor:'red'
                     }
                 },
                 {
-                    name:'日本',
-                    itemStyle:{
+                    name: '日本',
+                    itemStyle: {
                         // areaColor:'red'
                     }
                 },
                 {
-                    name:'俄罗斯',
-                    itemStyle:{
+                    name: '俄罗斯',
+                    itemStyle: {
                         // areaColor:'red'
                     }
                 },
                 {
-                    name:'英国',
-                    itemStyle:{
+                    name: '英国',
+                    itemStyle: {
                         // areaColor:'red'
                     }
                 }
@@ -463,16 +518,16 @@
             // },
             itemStyle: {
                 normal: {
-                    areaColor: "#0d0059",
-                    borderColor: "#389dff",
+                    areaColor: "rgba(20, 41, 87,0.65)",
+                    borderColor: "#195BB9",
                     // borderWidth: 1, //设置外层边框
-                    shadowBlur: 5,
+                    // shadowBlur: 5,
                     // shadowOffsetY: 8,
                     shadowOffsetX: 0,
-                    shadowColor: "#01012a"
+                    // shadowColor: "#01012a"
                 },
                 emphasis: {
-                    areaColor: "#184cff",
+                    areaColor: "#2B91B7",
                     shadowOffsetX: 0,
                     shadowOffsetY: 0,
                     shadowBlur: 5,

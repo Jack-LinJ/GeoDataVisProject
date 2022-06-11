@@ -101,7 +101,7 @@ header h1 {
   padding: 0 0.1875rem 0.5rem;
   border: 1px solid rgba(25, 186, 139, 0.17);
   margin-bottom: 0.1875rem;
-  background: url(../images/line\(1\).png) rgba(255, 255, 255, 0.03);
+  background: url(../images/line.png) rgba(255, 255, 255, 0.03);
   color: rgb(15, 248, 251);
   text-shadow: 1px 1px 1px rgb(209, 209, 209);
   letter-spacing: 0.04rem;
@@ -258,4 +258,18 @@ header h1 {
   height: 20px;
   margin-right: 10px;
   border-radius: 50%;
+}
+
+.colorIntro{
+  font-size: 25px;
+  height: 28px;
+  display:  inline-flex;
+  margin-top: 12px;
+}
+
+.colorBlock{
+  width: 40px;
+  height: 100%;
+  /* background-color: black; */
+  margin-right: 15px;
 }

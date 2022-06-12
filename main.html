@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    
+
     <header>
         <div style="display:inline-flex;margin: auto auto;justify-content: center;align-items: center;width: 100%;">
             <img src="images/twitter.png" alt="" style="height: 80px; width:80px;margin-right: 20px;">
@@ -109,9 +109,7 @@
 
             </div>
         </div>
-        <div class="button-left" style="width: 100px;height: 100px;position: fixed;background-color: white;" onmousedown="toleft()" onmouseup="endleft()" ></div>
-        <div class="button-left" style="width: 100px;height: 100px;position: fixed;left:200px;background-color: white;" onmousedown="toright()" onmouseup="endright()" ></div>
-        <div class="button-left" style="width: 100px;height: 100px;position: fixed;left:500px;background-color: rgb(255, 0, 0);" onclick="changeMapType()" ></div>
+
 
 
         <div class="map" style="height: 98%;width: 66%;margin-top: 80px;">
@@ -141,6 +139,32 @@
                 <div id="notice2" hidden style="font-size: 28px;margin-top: 25px;text-align: center;">该国未开通推特</div>
 
                 <div id="bar" style="height: 330px;width:auto;margin: auto;"></div>
+                <div class="panel-footer"></div>
+            </div>
+
+            <div style="min-height: 100px;height: auto;margin-top: 60px;width: 100%;" class="panel">
+                <div class="title-box">
+                    <div class="breathe circle"></div>
+                    <div>控制台</div>
+                </div>
+                <div class="container">
+                    <button class="btn breathe" id="changeMap" style="margin-top: 30px;"
+                        onclick="changeMapType()">切换至3D</button>
+                    <div id="turn" class="turn" hidden>
+
+                        <img id="toleft" hidden src="images/turn.png"
+                            style="transform: rotate(90deg);width: 80px;height: 80px;" alt="" onmousedown="toleft()"
+                            onmouseup="endleft()">
+                        <img id="toright" hidden src="images/turn.png"
+                            style="transform: rotate(-90deg);width: 80px;height: 80px;" alt="" onmousedown="toright()"
+                            onmouseup="endright()">
+
+                    </div>
+                    <div class="link-container">
+                        <a href="https://github.com/Jack-LinJ/GeoDataVisProject" style="width:50px;height:50px;" target="_blank"><img src="images/github.png" alt="" style="width:50px;height:50px;"></a><a href="https://echarts.apache.org/zh/index.html" target="_blank"><img src="images/echarts.png" alt="" style="width:48px;height:48px;"></a>
+
+                    </div>
+                </div>
                 <div class="panel-footer"></div>
             </div>
         </div>

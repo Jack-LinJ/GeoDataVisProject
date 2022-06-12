@@ -138,7 +138,7 @@ var setOption = function (id) {
         }
         else {
             for (let i in country.mutualFollower) {
-                option.geo.regions[country.mutualFollower[i] - 1].itemStyle.areaColor = mutualfollow_color;
+                option.geo.regions[country.mutualFollower[i] - 1].itemStyle.areaColor = normal_color;
             }
         }
 
@@ -440,7 +440,7 @@ function dataInit() {
         myRegions.push(tmp)
         // console.log(countryData[i].id, tmp.name, countryData[i].tState)
     }
-    console.log('初始化',myRegions)
+    console.log('初始化', myRegions)
     return myRegions
 
 }
@@ -650,6 +650,20 @@ function draw2D() {
     let myRegions = dataInit();
     // var dataValue = dealWithData();
     // console.log(myRegions)
+    myRegions.push({
+        name: 'graticule',
+        itemStyle: {
+            borderColor: 'rgba(0,0,0,0)'
+        },
+        emphasis: {
+            itemStyle: {
+                color: 'rgba(0,0,0,0)'
+            }
+        },
+        label: {
+            show: false
+        }
+    })
     option = {
         // 图表主标题
         title: {
@@ -726,8 +740,7 @@ function draw2D() {
     console.log(myRegions)
     myChart.setOption(option);
 }
-var app = {};
-var xRotate = 0;
+
 var projection;
 function draw3D() {
 
@@ -767,7 +780,7 @@ function draw3D() {
                 name: 'graticule'
             }
         });
-        echarts.registerMap('world', res[0]);
+        echarts.registerMap('3dworld', res[0]);
         projection = d3.geoOrthographic();
 
         // myRegions = []
@@ -789,20 +802,20 @@ function draw3D() {
         //     }
         //     myRegions.push(tmp)
         // }
-        // myRegions.push({
-        //     name: 'graticule',
-        //     itemStyle: {
-        //         borderColor: '#bbb'
-        //     },
-        //     emphasis: {
-        //         disabled: true
-        //     }
-        // })
-        // console.log(myRegions)
+        myRegions.push({
+            name: 'graticule',
+            itemStyle: {
+                borderColor: '#bbb'
+            },
+            emphasis: {
+                disabled: true
+            }
+        })
+        console.log('3d', myRegions)
         option = {
             tooltip: {},
             geo: {
-                map: 'world',
+                map: '3dworld',
                 projection: {
                     project: (pt) => projection(pt),
                     unproject: (pt) => projection.invert(pt),
@@ -825,41 +838,11 @@ function draw3D() {
                 regions: myRegions
             }
         };
+        projection.rotate([xRotate, -10])
         myChart.setOption(option);
     });
 
-    app.config = {
-        rotateX: 100,
-        rotateY: 50,
-        onChange() {
-            projection && projection.rotate([app.config.rotateX, app.config.rotateY]);
-            myChart.setOption({
-                geo: {}
-            });
-        }
-    };
-    app.configParameters = {
-        rotateX: {
-            min: -180,
-            max: 180
-        },
-        rotateY: {
-            min: -80,
-            max: 80
-        }
-    };
-    function rotation() {
-        setTimeout(() => {
-            xRotate += 0.1
-            projection.rotate([xRotate, 0])
-            myChart.setOption({
-                geo: {}
-            });
-            console.log(xRotate)
-            rotation()
-        }, 5);
-    }
-    // rotation()
+
     function createLineString(start, end) {
         const dx = end[0] - start[0];
         const dy = end[1] - start[1];
@@ -876,10 +859,12 @@ function draw3D() {
 
 }
 var flag = 0
+var xRotate = 0
 setInterval(() => {
     if (flag != 0) {
         xRotate += flag
-        projection.rotate([xRotate, 0])
+        console.log(xRotate)
+        projection.rotate([xRotate, -10])
         myChart.setOption({
             geo: {}
         });
@@ -887,24 +872,26 @@ setInterval(() => {
 }, 10);
 function toleft() {
     console.log('鼠标按下')
+    document.getElementById('toleft').src = 'images/_turn.png'
     flag = -1
 
 
 }
 function endleft() {
     console.log('鼠标放开')
-
+    document.getElementById('toleft').src = 'images/turn.png'
     flag = 0
 }
 function toright() {
     console.log('鼠标按下')
+    document.getElementById('toright').src = 'images/_turn.png'
     flag = 1
 
 
 }
 function endright() {
     console.log('鼠标放开')
-
+    document.getElementById('toright').src = 'images/turn.png'
     flag = 0
 }
 
@@ -912,6 +899,10 @@ function changeMapType() {
     if (mapType == '2d') {
         document.getElementsByTagName('body')[0].style['background'] = "url('images//bg1.jpg')"
         document.getElementsByTagName('body')[0].style['background-size'] = "100%"
+        document.getElementById('toleft').hidden = false
+        document.getElementById('toright').hidden = false
+        document.getElementById('turn').hidden = false
+        document.getElementById('changeMap').innerHTML = '切换至2D'
         myChart.dispose()
         myChart = echarts.init(document.getElementById('world'));
         bindClick()
@@ -920,9 +911,15 @@ function changeMapType() {
     else if (mapType == '3d') {
         document.getElementsByTagName('body')[0].style['background'] = "url('images//bg.jpg')no-repeat"
         document.getElementsByTagName('body')[0].style['background-size'] = "100%"
+        document.getElementById('toleft').hidden = true
+        document.getElementById('toright').hidden = true
+        document.getElementById('turn').hidden = true
+
+        document.getElementById('changeMap').innerHTML = '切换至3D'
         myChart.dispose()
         myChart = echarts.init(document.getElementById('world'));
         bindClick()
         draw2D()
     }
 }
+

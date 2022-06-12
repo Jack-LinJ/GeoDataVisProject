@@ -36,35 +36,44 @@ function disableVisual(id) {
 
 }
 
+// 标记目前是2d图还是3d图
+var mapType = '2d'
+
 var myChart = echarts.init(document.getElementById('world'));
+bindClick()
+var option;
 var selectedId = -1;
+
 // 点击国家后显示该国信息
-myChart.on('click', function (params) {
-    console.log('点击', params.name);
-    // console.log(option.geo.regions[0].itemStyle.areaColor, option.geo.zoom, option.geo.center)
-    let id = country2id[params.name];
-    console.log("id", id);
-    selectedId = id - 1;
-    // excel编号从1开始了
-    setOption(selectedId);
-    if (countryData[selectedId].tState == 0) {
-        document.getElementById('notice1').hidden = false
-        document.getElementById('notice2').hidden = false
-        document.getElementById('pie').hidden = true
-        document.getElementById('bar').hidden = true
+function bindClick() {
+    myChart.on('click', function (params) {
+        console.log('点击', params.name);
+        // console.log(option.geo.regions[0].itemStyle.areaColor, option.geo.zoom, option.geo.center)
+        let id = country2id[params.name];
+        console.log("id", id);
+        selectedId = id - 1;
+        // excel编号从1开始了
+        setOption(selectedId);
+        if (countryData[selectedId].tState == 0) {
+            document.getElementById('notice1').hidden = false
+            document.getElementById('notice2').hidden = false
+            document.getElementById('pie').hidden = true
+            document.getElementById('bar').hidden = true
 
-    }
-    else {
+        }
+        else {
 
-        document.getElementById('notice1').hidden = true
-        document.getElementById('notice2').hidden = true
-        document.getElementById('pie').hidden = false
-        document.getElementById('bar').hidden = false
+            document.getElementById('notice1').hidden = true
+            document.getElementById('notice2').hidden = true
+            document.getElementById('pie').hidden = false
+            document.getElementById('bar').hidden = false
 
-        drawPie(selectedId);
-        drawBar(selectedId);
-    }
-})
+            drawPie(selectedId);
+            drawBar(selectedId);
+        }
+    })
+}
+
 
 // 重置option
 var resetOption = function () {
@@ -136,10 +145,13 @@ var setOption = function (id) {
         // 无推特国家变黑
         if (visual[3]) {
             for (let i in option.geo.regions) {
-                console.log(countryData[country2id[(option.geo.regions[i].name)] - 1])
-                if (countryData[country2id[option.geo.regions[i].name] - 1].tState == 0) {
-                    option.geo.regions[i].itemStyle.areaColor = noTwitter_color
+                if (option.geo.regions[i].name != 'graticule') {
+                    // console.log(countryData[country2id[(option.geo.regions[i].name)] - 1])
+                    if (countryData[country2id[option.geo.regions[i].name] - 1].tState == 0) {
+                        option.geo.regions[i].itemStyle.areaColor = noTwitter_color
+                    }
                 }
+
 
             }
         }
@@ -386,90 +398,15 @@ let nameMap =
     'St. Vin. and Gren.': '圣文森特和格林纳丁斯'
 }
 var countryData //国家信息
-var myRegions //地图样式
+// var myRegions //地图样式
 var country2id //国家id映射
 
 $.getJSON('text3.json', function (data) {
     console.log("数据导入成功");
     countryData = data;
-    dataInit();
-    // var dataValue = dealWithData();
-    // console.log(myRegions)
-    option = {
-        // 图表主标题
-        title: {
-        },
-        tooltip: {
-            show: true,
-            trigger: 'item',
-            formatter: function (params) {
-                console.log(1)
-                if (params.name) {
-                    return params.name + ' : ' + (isNaN(params.value) ? 0 : parseInt(params.value));
-                }
-            }
-        },
-        // 视觉映射组件
-        visualMap: {
 
-            type: 'continuous', // continuous 类型为连续型  piecewise 类型为分段型
-            show: false, // 是否显示 visualMap-continuous 组件 如果设置为 false，不会显示，但是数据映射的功能还存在
-            // 指定 visualMapContinuous 组件的允许的最小/大值。'min'/'max' 必须用户指定。
-            // [visualMap.min, visualMax.max] 形成了视觉映射的『定义域』
-
-            // 文本样式
-            textStyle: {
-                fontSize: 14,
-                color: '#fff'
-            },
-            realtime: false, // 拖拽时，是否实时更新
-            calculable: false, // 是否显示拖拽用的手柄
-
-        },
-
-        geo: {
-
-            map: "world",
-            roam: true,// 一定要关闭拖拽
-            // zoom: 1.23,  
-            //   center: [105, 36], // 调整地图位置
-            label: {
-                normal: {
-                    show: false, //关闭省份名展示
-                    fontSize: "10",
-                    color: "rgba(0,0,0,0.6)"
-                },
-                emphasis: {
-                    show: false
-                }
-            },
-
-            regions: myRegions,
-            itemStyle: {
-                normal: {
-                    areaColor: "rgba(20, 41, 87,0.65)",
-                    // borderColor: "#195BB9",
-                    // borderWidth: 1, //设置外层边框
-                    // shadowBlur: 5,
-                    // shadowOffsetY: 8,
-                    shadowOffsetX: 0,
-                    // shadowColor: "#01012a"
-                },
-                emphasis: {
-                    areaColor: "rgba(65,105,225)",
-                    shadowOffsetX: 0,
-                    shadowOffsetY: 0,
-                    shadowBlur: 5,
-                    borderWidth: 0,
-                    shadowColor: "rgba(0, 0, 0, 0.5)"
-                }
-            }
-        },
-        series: [
-        ]
-    };
-    myChart.setOption(option);
-
+    draw2D()
+    // draw3D()
 })
 
 
@@ -483,7 +420,7 @@ function dataInit() {
     // console.log(country2id)
 
     // 初始化option.geo.regions
-    myRegions = []
+    let myRegions = []
     for (let i = 0; i < countryData.length; i++) {
         let myAreaColor = ""
         // 没有推特
@@ -503,6 +440,9 @@ function dataInit() {
         myRegions.push(tmp)
         // console.log(countryData[i].id, tmp.name, countryData[i].tState)
     }
+    console.log('初始化',myRegions)
+    return myRegions
+
 }
 
 // 绘制饼图
@@ -704,93 +644,222 @@ function drawBar(id) {
     barChart.setOption(barOption)
 
 }
-draw3D()
-function draw3D(){
 
-    var app = {};
-    var myChart = echarts.init(document.getElementById('3d'))
+function draw2D() {
+    mapType = '2d'
+    let myRegions = dataInit();
+    // var dataValue = dealWithData();
+    // console.log(myRegions)
+    option = {
+        // 图表主标题
+        title: {
+        },
+        tooltip: {
+            show: true,
+            trigger: 'item',
+            formatter: function (params) {
+                console.log(1)
+                if (params.name) {
+                    return params.name + ' : ' + (isNaN(params.value) ? 0 : parseInt(params.value));
+                }
+            }
+        },
+        // 视觉映射组件
+        visualMap: {
+
+            type: 'continuous', // continuous 类型为连续型  piecewise 类型为分段型
+            show: false, // 是否显示 visualMap-continuous 组件 如果设置为 false，不会显示，但是数据映射的功能还存在
+            // 指定 visualMapContinuous 组件的允许的最小/大值。'min'/'max' 必须用户指定。
+            // [visualMap.min, visualMax.max] 形成了视觉映射的『定义域』
+
+            // 文本样式
+            textStyle: {
+                fontSize: 14,
+                color: '#fff'
+            },
+            realtime: false, // 拖拽时，是否实时更新
+            calculable: false, // 是否显示拖拽用的手柄
+
+        },
+
+        geo: {
+
+            map: "world",
+            roam: true,
+            // zoom: 1.23,  
+            //   center: [105, 36], // 调整地图位置
+            label: {
+                normal: {
+                    show: false, //关闭省份名展示
+                    fontSize: "10",
+                    color: "rgba(0,0,0,0.6)"
+                },
+                emphasis: {
+                    show: false
+                }
+            },
+
+            regions: myRegions,
+            itemStyle: {
+                normal: {
+                    areaColor: "rgba(20, 41, 87,0.65)",
+                    // borderColor: "#195BB9",
+                    // borderWidth: 1, //设置外层边框
+                    // shadowBlur: 5,
+                    // shadowOffsetY: 8,
+                    shadowOffsetX: 0,
+                    // shadowColor: "#01012a"
+                },
+                emphasis: {
+                    areaColor: "rgba(65,105,225)",
+                    shadowOffsetX: 0,
+                    shadowOffsetY: 0,
+                    shadowBlur: 5,
+                    borderWidth: 0,
+                    shadowColor: "rgba(0, 0, 0, 0.5)"
+                }
+            }
+        },
+        series: [
+        ]
+    };
+    console.log(myRegions)
+    myChart.setOption(option);
+}
+var app = {};
+var xRotate = 0;
+var projection;
+function draw3D() {
+
+    mapType = '3d'
+    // myChart = echarts.init(document.getElementById('world'), null, {
+    //     renderer: 'canvas',
+    //     useDirtyRect: false
+    //   });
+    let myRegions = dataInit()
+
     $.when(
-        $.get('echarts/world.json'),
+        $.get('echarts/3dworld.json'),
         $.getScript('d3-array.js'),
         $.getScript('d3-geo.js')
-      ).done(function (res) {
+    ).done(function (res) {
+        // console.log(res)
+
+        // 中文名映射
+        // for (let i in res[0].features) {
+        //     res[0].features[i].properties.name = nameMap[res[0].features[i].properties.name]
+        // }
         // myChart.hideLoading();
         // Add graticule
         const graticuleLineStrings = [];
         for (let lat = -80; lat <= 80; lat += 10) {
-          graticuleLineStrings.push(createLineString([-180, lat], [180, lat]));
+            graticuleLineStrings.push(createLineString([-180, lat], [180, lat]));
         }
         for (let lng = -180; lng <= 180; lng += 10) {
-          graticuleLineStrings.push(createLineString([lng, -80], [lng, 80]));
+            graticuleLineStrings.push(createLineString([lng, -80], [lng, 80]));
         }
         res[0].features.unshift({
-          geometry: {
-            type: 'MultiLineString',
-            coordinates: graticuleLineStrings
-          },
-          properties: {
-            name: 'graticule'
-          }
+            geometry: {
+                type: 'MultiLineString',
+                coordinates: graticuleLineStrings
+            },
+            properties: {
+                name: 'graticule'
+            }
         });
         echarts.registerMap('world', res[0]);
         projection = d3.geoOrthographic();
+
+        // myRegions = []
+        // for (let i = 0; i < countryData.length; i++) {
+        //     let myAreaColor = ""
+        //     // 没有推特
+        //     if (countryData[i].tState == 0)
+        //         myAreaColor = noTwitter_color
+        //     // 有推特但没关注
+        //     // else if(countryData[i].tState==1)
+        //     //     myAreaColor="0d0045"
+        //     else
+        //         myAreaColor = normal_color
+        //     let tmp = {
+        //         name: nameMap[countryData[i].countryName],
+        //         itemStyle: {
+        //             areaColor: myAreaColor
+        //         }
+        //     }
+        //     myRegions.push(tmp)
+        // }
+        // myRegions.push({
+        //     name: 'graticule',
+        //     itemStyle: {
+        //         borderColor: '#bbb'
+        //     },
+        //     emphasis: {
+        //         disabled: true
+        //     }
+        // })
+        // console.log(myRegions)
         option = {
-          geo: {
-            map: 'world',
-            projection: {
-              project: (pt) => projection(pt),
-              unproject: (pt) => projection.invert(pt),
-              stream: projection.stream
-            },
-            itemStyle: {
-              borderColor: '#333',
-              borderWidth: 1,
-              borderJoin: 'round',
-              color: '#000'
-            },
-            emphasis: {
-              label: {
-                show: false
-              },
-              itemStyle: {
-                color: 'skyblue'
-              }
-            },
-            regions: [
-              {
-                name: 'graticule',
+            tooltip: {},
+            geo: {
+                map: 'world',
+                projection: {
+                    project: (pt) => projection(pt),
+                    unproject: (pt) => projection.invert(pt),
+                    stream: projection.stream
+                },
                 itemStyle: {
-                  borderColor: '#bbb'
+                    borderColor: '#333',
+                    borderWidth: 1,
+                    borderJoin: 'round',
+                    color: '#000'
                 },
                 emphasis: {
-                  disabled: true
-                }
-              }
-            ]
-          }
+                    label: {
+                        show: false
+                    },
+                    itemStyle: {
+                        color: 'skyblue'
+                    }
+                },
+                regions: myRegions
+            }
         };
         myChart.setOption(option);
-      });
-      app.config = {
-        rotateX: 0,
-        rotateY: 0,
+    });
+
+    app.config = {
+        rotateX: 100,
+        rotateY: 50,
         onChange() {
-          projection && projection.rotate([app.config.rotateX, app.config.rotateY]);
-          myChart.setOption({
-            geo: {}
-          });
+            projection && projection.rotate([app.config.rotateX, app.config.rotateY]);
+            myChart.setOption({
+                geo: {}
+            });
         }
-      };
-      app.configParameters = {
+    };
+    app.configParameters = {
         rotateX: {
-          min: -180,
-          max: 180
+            min: -180,
+            max: 180
         },
         rotateY: {
-          min: -80,
-          max: 80
+            min: -80,
+            max: 80
         }
-      };
+    };
+    function rotation() {
+        setTimeout(() => {
+            xRotate += 0.1
+            projection.rotate([xRotate, 0])
+            myChart.setOption({
+                geo: {}
+            });
+            console.log(xRotate)
+            rotation()
+        }, 5);
+    }
+    // rotation()
     function createLineString(start, end) {
         const dx = end[0] - start[0];
         const dy = end[1] - start[1];
@@ -803,5 +872,57 @@ function draw3D(){
             points.push([start[0] + i * stepX, start[1] + i * stepY]);
         }
         return points;
+    }
+
+}
+var flag = 0
+setInterval(() => {
+    if (flag != 0) {
+        xRotate += flag
+        projection.rotate([xRotate, 0])
+        myChart.setOption({
+            geo: {}
+        });
+    }
+}, 10);
+function toleft() {
+    console.log('鼠标按下')
+    flag = -1
+
+
+}
+function endleft() {
+    console.log('鼠标放开')
+
+    flag = 0
+}
+function toright() {
+    console.log('鼠标按下')
+    flag = 1
+
+
+}
+function endright() {
+    console.log('鼠标放开')
+
+    flag = 0
+}
+
+function changeMapType() {
+    if (mapType == '2d') {
+        document.getElementsByTagName('body')[0].style['background'] = "url('images//bg1.jpg')"
+        document.getElementsByTagName('body')[0].style['background-size'] = "100%"
+        myChart.dispose()
+        myChart = echarts.init(document.getElementById('world'));
+        bindClick()
+        draw3D()
+    }
+    else if (mapType == '3d') {
+        document.getElementsByTagName('body')[0].style['background'] = "url('images//bg.jpg')no-repeat"
+        document.getElementsByTagName('body')[0].style['background-size'] = "100%"
+        myChart.dispose()
+        myChart = echarts.init(document.getElementById('world'));
+        bindClick()
+        draw2D()
     }
 }

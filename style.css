@@ -39,7 +39,7 @@ header h1 {
 
 
 .flag {
-  margin-top: 20px;
+  margin-top: 1vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -48,7 +48,7 @@ header h1 {
 
 .profile {
   width: 100%;
-  height: 400px;
+  height: 25vh;
   display: inline-flex;
   margin-top: 10px;
   /* flex-wrap: wrap; */
@@ -65,7 +65,7 @@ header h1 {
   display: flex;
   flex-direction: column;
   margin-left: 15px;
-  font-size: 20px;
+  font-size: 1.7vh;
 }
 
 .profile-content {

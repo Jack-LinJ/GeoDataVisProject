@@ -897,8 +897,8 @@ function endright() {
 
 function changeMapType() {
     if (mapType == '2d') {
-        document.getElementsByTagName('body')[0].style['background'] = "url('images//bg1.jpg')"
-        document.getElementsByTagName('body')[0].style['background-size'] = "100%"
+        document.getElementById('background').src = 'images//bg1.jpg'
+        // document.getElementsByTagName('body')[0].style['background-size'] = "100%"
         document.getElementById('toleft').hidden = false
         document.getElementById('toright').hidden = false
         document.getElementById('turn').hidden = false
@@ -909,8 +909,8 @@ function changeMapType() {
         draw3D()
     }
     else if (mapType == '3d') {
-        document.getElementsByTagName('body')[0].style['background'] = "url('images//bg.jpg')no-repeat"
-        document.getElementsByTagName('body')[0].style['background-size'] = "100%"
+        document.getElementById('background').src = 'images//bg.jpg'
+        // document.getElementsByTagName('body')[0].style['background-size'] = "100%"
         document.getElementById('toleft').hidden = true
         document.getElementById('toright').hidden = true
         document.getElementById('turn').hidden = true

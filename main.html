@@ -10,14 +10,14 @@
 
 <body>
 
-    <img id="background" src="images/bg.jpg" style="width: 100%;height:100%;position: fixed;z-index: -999;"  alt="">
-    <header>
-        <div style="display:inline-flex;margin: auto auto;justify-content: center;align-items: center;width: 100%;">
-            <img src="images/twitter.png" alt="" style="height: 80px; width:80px;margin-right: 20px;">
-            <h1>世界各国推特影响力</h1>
+    <img id="background" src="images/bg.jpg" style="width: 100vw;height:100vh;position: fixed;z-index: -999;"  alt="">
+
+        <div style="display:inline-flex;margin: auto auto;justify-content: center;align-items: center;width: 100%;height: 8vh;;background: url('images/head_bg.png');padding: 10px;">
+            <img src="images/twitter.png" alt="" style="height: 5vh; width:5vh;margin-right: 20px;">
+            <div style="font-size: 3vh; color:white">世界各国推特影响力</div>
         </div>
 
-    </header>
+
     <div class="index-bg">
         <div class="stars">
             <div class="star"></div>
@@ -39,9 +39,9 @@
 
         </div>
     </div>
-    <div style="display: inline-flex;width:100%;height:74%">
-        <div style="width: 16%;margin-left: 1%;">
-            <div style="height: auto;min-height:320px;margin-top: 10px;width: 100%;" class="panel">
+    <div style="display: inline-flex;width:100%;height:92vh">
+        <div style="width: 16vw;margin-left: 1vw;">
+            <div style="height: auto;min-height:28vh;margin-top: 10px;width: 100%;" class="panel">
                 <div class="title-box">
                     <div class="breathe circle"></div>
                     <div>国家信息</div>
@@ -57,7 +57,7 @@
             </div>
 
 
-            <div style="height: 280px;margin-top: 30px;width: 100%;" class="panel">
+            <div style="height: 22vh;margin-top: 30px;width: 100%;" class="panel">
                 <div class="title-box">
                     <div class="breathe circle"></div>
                     <div>领导人信息</div>
@@ -76,13 +76,13 @@
 
             </div>
 
-            <div style="height: 280px;margin-top: 30px;width: 100%;" class="panel"
+            <div style="height:23vh;margin-top: 30px;width: 100%;" class="panel"
                 style="flex-direction: column;display: flex;">
                 <div class="title-box">
                     <div class="breathe circle"></div>
                     <div>颜色说明</div>
                 </div>
-                <div style="display: flex;flex-direction:column;margin-left: 40px;margin-top: 13px;">
+                <div style="display: flex;flex-direction:column;margin-left: 2.5vw;margin-top: 13px;">
 
                     <div class="colorIntro">
                         <div id="selected" class="colorBlock"></div>
@@ -113,7 +113,7 @@
 
 
 
-        <div class="map" style="height: 98%;width: 66%;margin-top: 80px;">
+        <div class="map" style="height: 75vh;width: 66vw;margin-top: 80px;">
             <!-- <div class="map1"></div>
             <div class="map2"></div>
             <div class="map3"></div> -->
@@ -121,48 +121,48 @@
             <div id="world" class="chart"></div>
         </div>
         <!-- <div id="world" style="height: 98%;width: 66%;"></div> -->
-        <div style="width: 16%;margin-right: 1%;">
-            <div style="height: 350px;margin: 0px 0px ;width: 100%;" class="panel">
+        <div style="width: 16vw">
+            <div style="height: 30vh;margin: 0px 0px ;width: 100%;padding: 0;" class="panel">
                 <div class="title-box">
                     <div class="breathe circle"></div>
                     <div>影响力组成</div>
                 </div>
-                <div id="notice1" hidden style="font-size: 28px;margin-top: 25px;text-align: center;">该国未开通推特</div>
-                <div id="pie" style="height: 350px;width:300px;margin: auto;"></div>
+                <div id="notice1" hidden style="font-size: 1.2vw;margin-top: 2vh;text-align: center;">该国未开通推特</div>
+                <div id="pie" style="height: 28vh;width:16vw;"></div>
                 <div class="panel-footer"></div>
             </div>
 
-            <div style="height: 350px;margin-top: 30px;width: 100%;" class="panel">
+            <div style="height: 30vh;margin-top: 2vh;width: 100%;padding: 0;" class="panel">
                 <div class="title-box">
                     <div class="breathe circle"></div>
                     <div>在各州影响力</div>
                 </div>
-                <div id="notice2" hidden style="font-size: 28px;margin-top: 25px;text-align: center;">该国未开通推特</div>
+                <div id="notice2" hidden style="font-size: 1.2vw;margin-top: 2vh;text-align: center;">该国未开通推特</div>
 
-                <div id="bar" style="height: 330px;width:auto;margin: auto;"></div>
+                <div id="bar" style="height: 28vh;width:16vw;margin: auto;"></div>
                 <div class="panel-footer"></div>
             </div>
 
-            <div style="min-height: 100px;height: auto;margin-top: 60px;width: 100%;" class="panel">
+            <div style="min-height: 15vh;height: auto;margin-top: 2vh;width: 100%;" class="panel">
                 <div class="title-box">
                     <div class="breathe circle"></div>
                     <div>控制台</div>
                 </div>
                 <div class="container">
-                    <button class="btn breathe" id="changeMap" style="margin-top: 30px;"
+                    <button class="btn breathe" id="changeMap" style="margin-top: 2.2vh;"
                         onclick="changeMapType()">切换至3D</button>
                     <div id="turn" class="turn" hidden>
 
                         <img id="toleft" hidden src="images/turn.png"
-                            style="transform: rotate(90deg);width: 80px;height: 80px;" alt="" onmousedown="toleft()"
+                            style="transform: rotate(90deg);width: 2.5vw;height: 2.5vw;" alt="" onmousedown="toleft()"
                             onmouseup="endleft()">
                         <img id="toright" hidden src="images/turn.png"
-                            style="transform: rotate(-90deg);width: 80px;height: 80px;" alt="" onmousedown="toright()"
+                            style="transform: rotate(-90deg);width: 2.5vw;height: 2.5vw;" alt="" onmousedown="toright()"
                             onmouseup="endright()">
 
                     </div>
                     <div class="link-container">
-                        <a href="https://github.com/Jack-LinJ/GeoDataVisProject" style="width:50px;height:50px;" target="_blank"><img src="images/github.png" alt="" style="width:50px;height:50px;"></a><a href="https://echarts.apache.org/zh/index.html" target="_blank"><img src="images/echarts.png" alt="" style="width:48px;height:48px;"></a>
+                        <a href="https://github.com/Jack-LinJ/GeoDataVisProject" style="width:2vw;height:2vw;" target="_blank"><img src="images/github.png" alt="" style="width:2vw;height:2vw;"></a><a href="https://echarts.apache.org/zh/index.html" target="_blank"><img src="images/echarts.png" alt="" style="width:1.9vw;height:1.9vw;"></a>
 
                     </div>
                 </div>

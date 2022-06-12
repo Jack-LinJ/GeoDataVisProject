@@ -98,7 +98,7 @@ var setOption = function (id) {
         document.getElementById('position').innerHTML = country.position
         document.getElementById('flag').src = country.flagUrl
         document.getElementById('no').innerHTML = '影响力排名：' + country.no
-        document.getElementById('eigc').innerHTML = 'EIGC：' + country.eigc
+        document.getElementById('eigc').innerHTML = '中心性数值：' + country.eigc
 
 
 

@@ -5,6 +5,14 @@
         "continent":"Africa",
         "countryName":"Algeria",
         "eigc":0,
+        "eigcContinent":[
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ],
         "flagUrl":"flags/dz.png",
         "follow":[],
         "follower":[],
@@ -22,6 +30,14 @@
         "continent":"Africa",
         "countryName":"Angola",
         "eigc":11,
+        "eigcContinent":[
+            11,
+            0,
+            0,
+            0,
+            0,
+            0
+        ],
         "flagUrl":"flags/ao.png",
         "follow":[],
         "follower":[
@@ -43,6 +59,14 @@
         "continent":"Africa",
         "countryName":"Benin",
         "eigc":0,
+        "eigcContinent":[
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ],
         "flagUrl":"flags/bj.png",
         "follow":[],
         "follower":[],
@@ -60,6 +84,14 @@
         "continent":"Africa",
         "countryName":"Botswana",
         "eigc":38,
+        "eigcContinent":[
+            38,
+            0,
+            0,
+            0,
+            0,
+            0
+        ],
         "flagUrl":"flags/bw.png",
         "follow":[
             55,
@@ -108,6 +140,14 @@
         "continent":"Africa",
         "countryName":"Burkina Faso",
         "eigc":83,
+        "eigcContinent":[
+            83,
+            0,
+            0,
+            0,
+            0,
+            0
+        ],
         "flagUrl":"flags/bf.png",
         "follow":[
             25,
@@ -159,6 +199,14 @@
         "continent":"Africa",
         "countryName":"Burundi",
         "eigc":0,
+        "eigcContinent":[
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ],
         "flagUrl":"flags/bi.png",
         "follow":[
             22,
@@ -179,6 +227,14 @@
         "continent":"Africa",
         "countryName":"Cameroon",
         "eigc":50,
+        "eigcContinent":[
+            50,
+            0,
+            0,
+            0,
+            0,
+            0
+        ],
         "flagUrl":"flags/cm.png",
         "follow":[
             158,
@@ -237,6 +293,14 @@
         "continent":"Africa",
         "countryName":"Cape Verde",
         "eigc":0,
+        "eigcContinent":[
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ],
         "flagUrl":"flags/cv.png",
         "follow":[
             43,
@@ -261,6 +325,14 @@
         "continent":"Africa",
         "countryName":"Central African Republic",
         "eigc":0,
+        "eigcContinent":[
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ],
         "flagUrl":"flags/cf.png",
         "follow":[
             182,
@@ -299,6 +371,14 @@
         "continent":"Africa",
         "countryName":"Chad",
         "eigc":0,
+        "eigcContinent":[
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ],
         "flagUrl":"flags/td.png",
         "follow":[
             14,
@@ -326,6 +406,14 @@
         "continent":"Africa",
         "countryName":"Comoros",
         "eigc":0,
+        "eigcContinent":[
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ],
         "flagUrl":"flags/km.png",
         "follow":[
             43,
@@ -358,6 +446,14 @@
         "continent":"Africa",
         "countryName":"Congo–Brazzaville (Republic of the Congo)",
         "eigc":0,
+        "eigcContinent":[
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ],
         "flagUrl":"flags/cg.png",
         "follow":[],
         "follower":[],
@@ -375,6 +471,14 @@
         "continent":"Africa",
         "countryName":"Congo–Kinshasa (Democratic Republic of the Congo)",
         "eigc":0,
+        "eigcContinent":[
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ],
         "flagUrl":"flags/cd.png",
         "follow":[],
         "follower":[],
@@ -392,6 +496,14 @@
         "continent":"Africa",
         "countryName":"Djibouti",
         "eigc":7,
+        "eigcContinent":[
+            7,
+            0,
+            0,
+            0,
+            0,
+            0
+        ],
         "flagUrl":"flags/dj.png",
         "follow":[],
         "follower":[
@@ -414,6 +526,14 @@
         "continent":"Africa",
         "countryName":"Egypt",
         "eigc":60,
+        "eigcContinent":[
+            35,
+            0,
+            25,
+            0,
+            0,
+            0
+        ],
         "flagUrl":"flags/eg.png",
         "follow":[],
         "follower":[
@@ -439,6 +559,14 @@
         "continent":"Africa",
         "countryName":"Equatorial Guinea",
         "eigc":0,
+        "eigcContinent":[
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ],
         "flagUrl":"flags/gq.png",
         "follow":[
             20,
@@ -461,6 +589,7 @@
         "continent":"Africa",
         "countryName":"Eritrea",
         "eigc":0,
+        "eigcContinent":[],
         "flagUrl":"flags/er.png",
         "follow":[],
         "follower":[],
@@ -478,6 +607,7 @@
         "continent":"Africa",
         "countryName":"Eswatini",
         "eigc":0,
+        "eigcContinent":[],
         "flagUrl":"flags/sz.png",
         "follow":[],
         "follower":[],
@@ -495,6 +625,14 @@
         "continent":"Africa",
         "countryName":"Ethiopia",
         "eigc":59,
+        "eigcContinent":[
+            59,
+            0,
+            0,
+            0,
+            0,
+            0
+        ],
         "flagUrl":"flags/et.png",
         "follow":[
             43,
@@ -530,6 +668,14 @@
         "continent":"Africa",
         "countryName":"Gabon",
         "eigc":55,
+        "eigcContinent":[
+            55,
+            0,
+            0,
+            0,
+            0,
+            0
+        ],
         "flagUrl":"flags/ga.png",
         "follow":[],
         "follower":[
@@ -555,6 +701,14 @@
         "continent":"Africa",
         "countryName":"The Gambia",
         "eigc":33,
+        "eigcContinent":[
+            33,
+            0,
+            0,
+            0,
+            0,
+            0
+        ],
         "flagUrl":"flags/gm.png",
         "follow":[
             25,
@@ -589,6 +743,14 @@
         "continent":"Africa",
         "countryName":"Ghana",
         "eigc":99,
+        "eigcContinent":[
+            98,
+            0,
+            0,
+            1,
+            0,
+            0
+        ],
         "flagUrl":"flags/gh.png",
         "follow":[
             122,
@@ -638,6 +800,7 @@
         "continent":"Africa",
         "countryName":"Guinea",
         "eigc":0,
+        "eigcContinent":[],
         "flagUrl":"flags/gn.png",
         "follow":[],
         "follower":[],
@@ -655,6 +818,7 @@
         "continent":"Africa",
         "countryName":"Guinea-Bissau",
         "eigc":0,
+        "eigcContinent":[],
         "flagUrl":"flags/gw.png",
         "follow":[],
         "follower":[
@@ -674,6 +838,14 @@
         "continent":"Africa",
         "countryName":"Ivory Coast",
         "eigc":65,
+        "eigcContinent":[
+            65,
+            0,
+            0,
+            0,
+            0,
+            0
+        ],
         "flagUrl":"flags/ci.png",
         "follow":[
             20,
@@ -722,6 +894,7 @@
         "continent":"Africa",
         "countryName":"Kenya",
         "eigc":0,
+        "eigcContinent":[],
         "flagUrl":"flags/ke.png",
         "follow":[],
         "follower":[],
@@ -739,6 +912,7 @@
         "continent":"Africa",
         "countryName":"Lesotho",
         "eigc":0,
+        "eigcContinent":[],
         "flagUrl":"flags/ls.png",
         "follow":[],
         "follower":[],
@@ -756,6 +930,14 @@
         "continent":"Africa",
         "countryName":"Liberia",
         "eigc":93,
+        "eigcContinent":[
+            50,
+            0,
+            43,
+            0,
+            0,
+            0
+        ],
         "flagUrl":"flags/lr.png",
         "follow":[
             38,
@@ -814,6 +996,7 @@
         "continent":"Africa",
         "countryName":"Libya",
         "eigc":0,
+        "eigcContinent":[],
         "flagUrl":"flags/ly.png",
         "follow":[],
         "follower":[],
@@ -831,6 +1014,14 @@
         "continent":"Africa",
         "countryName":"Madagascar",
         "eigc":7,
+        "eigcContinent":[
+            7,
+            0,
+            0,
+            0,
+            0,
+            0
+        ],
         "flagUrl":"flags/mg.png",
         "follow":[
             164,
@@ -869,6 +1060,14 @@
         "continent":"Africa",
         "countryName":"Malawi",
         "eigc":7,
+        "eigcContinent":[
+            7,
+            0,
+            0,
+            0,
+            0,
+            0
+        ],
         "flagUrl":"flags/mw.png",
         "follow":[
             22,
@@ -892,6 +1091,7 @@
         "continent":"Africa",
         "countryName":"Mali",
         "eigc":0,
+        "eigcContinent":[],
         "flagUrl":"flags/ml.png",
         "follow":[],
         "follower":[],
@@ -909,6 +1109,14 @@
         "continent":"Africa",
         "countryName":"Mauritania",
         "eigc":0,
+        "eigcContinent":[
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ],
         "flagUrl":"flags/mr.png",
         "follow":[
             25,
@@ -929,6 +1137,7 @@
         "continent":"Africa",
         "countryName":"Mauritius",
         "eigc":0,
+        "eigcContinent":[],
         "flagUrl":"flags/mu.png",
         "follow":[],
         "follower":[],
@@ -946,6 +1155,7 @@
         "continent":"Africa",
         "countryName":"Morocco",
         "eigc":0,
+        "eigcContinent":[],
         "flagUrl":"flags/ma.png",
         "follow":[],
         "follower":[],
@@ -963,6 +1173,7 @@
         "continent":"Africa",
         "countryName":"Mozambique",
         "eigc":0,
+        "eigcContinent":[],
         "flagUrl":"flags/mz.png",
         "follow":[],
         "follower":[],
@@ -980,6 +1191,7 @@
         "continent":"Africa",
         "countryName":"Namibia",
         "eigc":0,
+        "eigcContinent":[],
         "flagUrl":"flags/na.png",
         "follow":[],
         "follower":[],
@@ -997,6 +1209,14 @@
         "continent":"Africa",
         "countryName":"Niger",
         "eigc":15,
+        "eigcContinent":[
+            7,
+            0,
+            8,
+            0,
+            0,
+            0
+        ],
         "flagUrl":"flags/ne.png",
         "follow":[
             52,
@@ -1024,6 +1244,14 @@
         "continent":"Africa",
         "countryName":"Nigeria",
         "eigc":130,
+        "eigcContinent":[
+            98,
+            32,
+            0,
+            0,
+            0,
+            0
+        ],
         "flagUrl":"flags/ng.png",
         "follow":[
             65,
@@ -1068,6 +1296,14 @@
         "continent":"Africa",
         "countryName":"Rwanda",
         "eigc":155,
+        "eigcContinent":[
+            116,
+            32,
+            6,
+            1,
+            0,
+            0
+        ],
         "flagUrl":"flags/rw.png",
         "follow":[
             48,
@@ -1130,6 +1366,7 @@
         "continent":"Africa",
         "countryName":"Sahrawi Arab Democratic Republic (self-declared, partially recognised state)",
         "eigc":0,
+        "eigcContinent":[],
         "flagUrl":"",
         "follow":[],
         "follower":[],
@@ -1147,6 +1384,7 @@
         "continent":"Africa",
         "countryName":"São Tomé and Príncipe",
         "eigc":0,
+        "eigcContinent":[],
         "flagUrl":"flags/st.png",
         "follow":[],
         "follower":[
@@ -1166,6 +1404,14 @@
         "continent":"Africa",
         "countryName":"Senegal",
         "eigc":145,
+        "eigcContinent":[
+            94,
+            0,
+            51,
+            0,
+            0,
+            0
+        ],
         "flagUrl":"flags/sn.png",
         "follow":[
             25,
@@ -1239,6 +1485,7 @@
         "continent":"Africa",
         "countryName":"Seychelles",
         "eigc":0,
+        "eigcContinent":[],
         "flagUrl":"flags/sc.png",
         "follow":[],
         "follower":[],
@@ -1256,6 +1503,14 @@
         "continent":"Africa",
         "countryName":"Sierra Leone",
         "eigc":0,
+        "eigcContinent":[
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ],
         "flagUrl":"flags/sl.png",
         "follow":[],
         "follower":[],
@@ -1273,6 +1528,14 @@
         "continent":"Africa",
         "countryName":"Somalia",
         "eigc":0,
+        "eigcContinent":[
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ],
         "flagUrl":"flags/so.png",
         "follow":[],
         "follower":[],
@@ -1290,6 +1553,7 @@
         "continent":"Africa",
         "countryName":"Somaliland (unrecognized, secessionist state)",
         "eigc":0,
+        "eigcContinent":[],
         "flagUrl":"",
         "follow":[],
         "follower":[],
@@ -1307,6 +1571,14 @@
         "continent":"Africa",
         "countryName":"South Africa",
         "eigc":150,
+        "eigcContinent":[
+            110,
+            32,
+            8,
+            0,
+            0,
+            0
+        ],
         "flagUrl":"flags/za.png",
         "follow":[],
         "follower":[
@@ -1342,6 +1614,7 @@
         "continent":"Africa",
         "countryName":"South Sudan",
         "eigc":0,
+        "eigcContinent":[],
         "flagUrl":"flags/ssd.png",
         "follow":[],
         "follower":[],
@@ -1359,6 +1632,7 @@
         "continent":"Africa",
         "countryName":"Sudan",
         "eigc":0,
+        "eigcContinent":[],
         "flagUrl":"flags/sd.png",
         "follow":[],
         "follower":[],
@@ -1376,6 +1650,14 @@
         "continent":"Africa",
         "countryName":"Tanzania",
         "eigc":0,
+        "eigcContinent":[
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ],
         "flagUrl":"flags/tz.png",
         "follow":[
             182
@@ -1395,6 +1677,14 @@
         "continent":"Africa",
         "countryName":"Togo",
         "eigc":39,
+        "eigcContinent":[
+            39,
+            0,
+            0,
+            0,
+            0,
+            0
+        ],
         "flagUrl":"flags/tg.png",
         "follow":[
             122,
@@ -1444,6 +1734,7 @@
         "continent":"Africa",
         "countryName":"Tunisia",
         "eigc":0,
+        "eigcContinent":[],
         "flagUrl":"flags/tn.png",
         "follow":[],
         "follower":[
@@ -1463,6 +1754,14 @@
         "continent":"Africa",
         "countryName":"Uganda",
         "eigc":77,
+        "eigcContinent":[
+            45,
+            32,
+            0,
+            0,
+            0,
+            0
+        ],
         "flagUrl":"flags/ug.png",
         "follow":[
             65,
@@ -1495,6 +1794,14 @@
         "continent":"Africa",
         "countryName":"Zambia",
         "eigc":31,
+        "eigcContinent":[
+            31,
+            0,
+            0,
+            0,
+            0,
+            0
+        ],
         "flagUrl":"flags/zm.png",
         "follow":[
             159
@@ -1519,6 +1826,14 @@
         "continent":"Africa",
         "countryName":"Zimbabwe",
         "eigc":23,
+        "eigcContinent":[
+            23,
+            0,
+            0,
+            0,
+            0,
+            0
+        ],
         "flagUrl":"flags/zw.png",
         "follow":[
             43,
@@ -1559,6 +1874,7 @@
         "continent":"Asia",
         "countryName":"Afghanistan",
         "eigc":0,
+        "eigcContinent":[],
         "flagUrl":"flags/af.png",
         "follow":[],
         "follower":[],
@@ -1576,6 +1892,7 @@
         "continent":"Asia",
         "countryName":"Bahrain",
         "eigc":0,
+        "eigcContinent":[],
         "flagUrl":"flags/bh.png",
         "follow":[],
         "follower":[],
@@ -1593,6 +1910,14 @@
         "continent":"Asia",
         "countryName":"Bangladesh",
         "eigc":0,
+        "eigcContinent":[
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ],
         "flagUrl":"flags/bd.png",
         "follow":[
             182,
@@ -1614,6 +1939,7 @@
         "continent":"Asia",
         "countryName":"Bhutan",
         "eigc":0,
+        "eigcContinent":[],
         "flagUrl":"flags/bt.png",
         "follow":[],
         "follower":[],
@@ -1631,6 +1957,7 @@
         "continent":"Asia",
         "countryName":"Brunei",
         "eigc":0,
+        "eigcContinent":[],
         "flagUrl":"flags/bn.png",
         "follow":[],
         "follower":[],
@@ -1648,6 +1975,7 @@
         "continent":"Asia",
         "countryName":"Cambodia",
         "eigc":0,
+        "eigcContinent":[],
         "flagUrl":"flags/kh.png",
         "follow":[],
         "follower":[],
@@ -1665,6 +1993,7 @@
         "continent":"Asia",
         "countryName":"China (People's Republic of China)",
         "eigc":0,
+        "eigcContinent":[],
         "flagUrl":"flags/cn.png",
         "follow":[],
         "follower":[],
@@ -1682,6 +2011,7 @@
         "continent":"Asia",
         "countryName":"East Timor",
         "eigc":0,
+        "eigcContinent":[],
         "flagUrl":"flags/tp.png",
         "follow":[],
         "follower":[],
@@ -1699,6 +2029,14 @@
         "continent":"Asia",
         "countryName":"India",
         "eigc":252,
+        "eigcContinent":[
+            68,
+            13,
+            113,
+            45,
+            4,
+            9
+        ],
         "flagUrl":"flags/in.png",
         "follow":[
             183,
@@ -1797,6 +2135,14 @@
         "continent":"Asia",
         "countryName":"Indonesia",
         "eigc":47,
+        "eigcContinent":[
+            0,
+            33,
+            8,
+            0,
+            0,
+            6
+        ],
         "flagUrl":"flags/id.png",
         "follow":[
             65
@@ -1825,6 +2171,7 @@
         "continent":"Asia",
         "countryName":"Iran",
         "eigc":0,
+        "eigcContinent":[],
         "flagUrl":"flags/ir.png",
         "follow":[],
         "follower":[],
@@ -1842,6 +2189,14 @@
         "continent":"Asia",
         "countryName":"Iraq",
         "eigc":0,
+        "eigcContinent":[
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ],
         "flagUrl":"flags/iq.png",
         "follow":[
             182
@@ -1861,6 +2216,14 @@
         "continent":"Asia",
         "countryName":"Israel",
         "eigc":23,
+        "eigcContinent":[
+            0,
+            0,
+            23,
+            0,
+            0,
+            0
+        ],
         "flagUrl":"flags/il.png",
         "follow":[
             182,
@@ -1885,6 +2248,14 @@
         "continent":"Asia",
         "countryName":"Japan",
         "eigc":46,
+        "eigcContinent":[
+            0,
+            32,
+            8,
+            0,
+            0,
+            6
+        ],
         "flagUrl":"flags/jp.png",
         "follow":[
             183,
@@ -1919,6 +2290,14 @@
         "continent":"Asia",
         "countryName":"Jordan",
         "eigc":0,
+        "eigcContinent":[
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ],
         "flagUrl":"flags/jo.png",
         "follow":[],
         "follower":[],
@@ -1936,6 +2315,7 @@
         "continent":"Asia",
         "countryName":"Kazakhstan",
         "eigc":0,
+        "eigcContinent":[],
         "flagUrl":"flags/kz.png",
         "follow":[],
         "follower":[],
@@ -1953,6 +2333,7 @@
         "continent":"Asia",
         "countryName":"North Korea (Democratic People's Republic of Korea)",
         "eigc":0,
+        "eigcContinent":[],
         "flagUrl":"flags/kp.png",
         "follow":[],
         "follower":[],
@@ -1970,6 +2351,14 @@
         "continent":"Asia",
         "countryName":"South Korea (Republic of Korea)",
         "eigc":0,
+        "eigcContinent":[
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ],
         "flagUrl":"flags/kr.png",
         "follow":[],
         "follower":[],
@@ -1987,6 +2376,7 @@
         "continent":"Asia",
         "countryName":"Kuwait",
         "eigc":0,
+        "eigcContinent":[],
         "flagUrl":"flags/kw.png",
         "follow":[],
         "follower":[],
@@ -2004,6 +2394,7 @@
         "continent":"Asia",
         "countryName":"Kyrgyzstan",
         "eigc":0,
+        "eigcContinent":[],
         "flagUrl":"flags/kg.png",
         "follow":[],
         "follower":[],
@@ -2021,6 +2412,7 @@
         "continent":"Asia",
         "countryName":"Laos",
         "eigc":0,
+        "eigcContinent":[],
         "flagUrl":"flags/la.png",
         "follow":[],
         "follower":[],
@@ -2038,6 +2430,14 @@
         "continent":"Asia",
         "countryName":"Lebanon",
         "eigc":53,
+        "eigcContinent":[
+            6,
+            0,
+            47,
+            0,
+            0,
+            0
+        ],
         "flagUrl":"flags/lb.png",
         "follow":[],
         "follower":[
@@ -2059,6 +2459,14 @@
         "continent":"Asia",
         "countryName":"Malaysia",
         "eigc":0,
+        "eigcContinent":[
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ],
         "flagUrl":"flags/my.png",
         "follow":[
             66,
@@ -2079,6 +2487,14 @@
         "continent":"Asia",
         "countryName":"Maldives",
         "eigc":33,
+        "eigcContinent":[
+            0,
+            33,
+            0,
+            0,
+            0,
+            0
+        ],
         "flagUrl":"flags/mv.png",
         "follow":[
             65
@@ -2105,6 +2521,7 @@
         "continent":"Asia",
         "countryName":"Mongolia",
         "eigc":0,
+        "eigcContinent":[],
         "flagUrl":"flags/mn.png",
         "follow":[],
         "follower":[],
@@ -2122,6 +2539,7 @@
         "continent":"Asia",
         "countryName":"Myanmar",
         "eigc":0,
+        "eigcContinent":[],
         "flagUrl":"flags/mm.png",
         "follow":[],
         "follower":[],
@@ -2139,6 +2557,14 @@
         "continent":"Asia",
         "countryName":"Nepal",
         "eigc":32,
+        "eigcContinent":[
+            0,
+            32,
+            0,
+            0,
+            0,
+            0
+        ],
         "flagUrl":"flags/np.png",
         "follow":[
             183,
@@ -2164,6 +2590,7 @@
         "continent":"Asia",
         "countryName":"Oman",
         "eigc":0,
+        "eigcContinent":[],
         "flagUrl":"flags/om.png",
         "follow":[],
         "follower":[],
@@ -2181,6 +2608,14 @@
         "continent":"Asia",
         "countryName":"Pakistan",
         "eigc":1,
+        "eigcContinent":[
+            0,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
         "flagUrl":"flags/pk.png",
         "follow":[
             182,
@@ -2206,6 +2641,14 @@
         "continent":"Asia",
         "countryName":"Palestine",
         "eigc":0,
+        "eigcContinent":[
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ],
         "flagUrl":"flags/bl.png",
         "follow":[],
         "follower":[],
@@ -2223,6 +2666,7 @@
         "continent":"Asia",
         "countryName":"Philippines",
         "eigc":0,
+        "eigcContinent":[],
         "flagUrl":"flags/ph.png",
         "follow":[],
         "follower":[],
@@ -2240,6 +2684,7 @@
         "continent":"Asia",
         "countryName":"Qatar",
         "eigc":0,
+        "eigcContinent":[],
         "flagUrl":"flags/qa.png",
         "follow":[],
         "follower":[],
@@ -2257,6 +2702,14 @@
         "continent":"Asia",
         "countryName":"Saudi Arabia",
         "eigc":0,
+        "eigcContinent":[
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ],
         "flagUrl":"flags/sa.png",
         "follow":[],
         "follower":[],
@@ -2274,6 +2727,14 @@
         "continent":"Asia",
         "countryName":"Singapore",
         "eigc":2,
+        "eigcContinent":[
+            0,
+            0,
+            2,
+            0,
+            0,
+            0
+        ],
         "flagUrl":"flags/sg.png",
         "follow":[
             65,
@@ -2296,6 +2757,14 @@
         "continent":"Asia",
         "countryName":"Sri Lanka",
         "eigc":1,
+        "eigcContinent":[
+            0,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
         "flagUrl":"flags/lk.png",
         "follow":[
             164,
@@ -2322,6 +2791,7 @@
         "continent":"Asia",
         "countryName":"Syrian Arab Republic",
         "eigc":0,
+        "eigcContinent":[],
         "flagUrl":"flags/sy.png",
         "follow":[],
         "follower":[],
@@ -2339,6 +2809,7 @@
         "continent":"Asia",
         "countryName":"Syrian Interim Government (partially recognised, rival government)",
         "eigc":0,
+        "eigcContinent":[],
         "flagUrl":"",
         "follow":[],
         "follower":[],
@@ -2356,6 +2827,7 @@
         "continent":"Asia",
         "countryName":"Syrian Salvation Government (rival government)",
         "eigc":0,
+        "eigcContinent":[],
         "flagUrl":"",
         "follow":[],
         "follower":[],
@@ -2373,6 +2845,14 @@
         "continent":"Asia",
         "countryName":"Taiwan (Republic of China)",
         "eigc":4,
+        "eigcContinent":[
+            0,
+            0,
+            0,
+            4,
+            0,
+            0
+        ],
         "flagUrl":"flags/tw.png",
         "follow":[],
         "follower":[
@@ -2393,6 +2873,7 @@
         "continent":"Asia",
         "countryName":"Tajikistan",
         "eigc":0,
+        "eigcContinent":[],
         "flagUrl":"flags/tj.png",
         "follow":[],
         "follower":[],
@@ -2410,6 +2891,14 @@
         "continent":"Asia",
         "countryName":"Thailand",
         "eigc":0,
+        "eigcContinent":[
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ],
         "flagUrl":"flags/th.png",
         "follow":[],
         "follower":[],
@@ -2427,6 +2916,14 @@
         "continent":"Asia",
         "countryName":"Turkey",
         "eigc":85,
+        "eigcContinent":[
+            0,
+            32,
+            50,
+            3,
+            0,
+            0
+        ],
         "flagUrl":"flags/tr.png",
         "follow":[],
         "follower":[
@@ -2454,6 +2951,7 @@
         "continent":"Asia",
         "countryName":"Turkmenistan",
         "eigc":0,
+        "eigcContinent":[],
         "flagUrl":"flags/tm.png",
         "follow":[],
         "follower":[],
@@ -2471,6 +2969,14 @@
         "continent":"Asia",
         "countryName":"United Arab Emirates",
         "eigc":76,
+        "eigcContinent":[
+            0,
+            32,
+            44,
+            0,
+            0,
+            0
+        ],
         "flagUrl":"flags/ae.png",
         "follow":[],
         "follower":[
@@ -2494,6 +3000,14 @@
         "continent":"Asia",
         "countryName":"Uzbekistan",
         "eigc":0,
+        "eigcContinent":[
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ],
         "flagUrl":"flags/uz.png",
         "follow":[],
         "follower":[],
@@ -2511,6 +3025,7 @@
         "continent":"Asia",
         "countryName":"Vietnam",
         "eigc":0,
+        "eigcContinent":[],
         "flagUrl":"flags/vn.png",
         "follow":[],
         "follower":[],
@@ -2528,6 +3043,7 @@
         "continent":"Asia",
         "countryName":"Yemen(Republic of Yemem)",
         "eigc":0,
+        "eigcContinent":[],
         "flagUrl":"flags/ye.png",
         "follow":[],
         "follower":[],
@@ -2545,6 +3061,7 @@
         "continent":"Europe",
         "countryName":"Abkhazia (partially recognised, secessionist state)",
         "eigc":0,
+        "eigcContinent":[],
         "flagUrl":"",
         "follow":[],
         "follower":[],
@@ -2562,6 +3079,14 @@
         "continent":"Europe",
         "countryName":"Albania",
         "eigc":22,
+        "eigcContinent":[
+            0,
+            0,
+            22,
+            0,
+            0,
+            0
+        ],
         "flagUrl":"flags/al.png",
         "follow":[
             157,
@@ -2598,6 +3123,7 @@
         "continent":"Europe",
         "countryName":"Andorra",
         "eigc":0,
+        "eigcContinent":[],
         "flagUrl":"flags/ad.png",
         "follow":[],
         "follower":[],
@@ -2615,6 +3141,14 @@
         "continent":"Europe",
         "countryName":"Armenia",
         "eigc":12,
+        "eigcContinent":[
+            0,
+            0,
+            12,
+            0,
+            0,
+            0
+        ],
         "flagUrl":"flags/am.png",
         "follow":[
             147,
@@ -2640,6 +3174,7 @@
         "continent":"Europe",
         "countryName":"Artsakh (unrecognised, secessionist state)",
         "eigc":0,
+        "eigcContinent":[],
         "flagUrl":"",
         "follow":[],
         "follower":[],
@@ -2657,6 +3192,14 @@
         "continent":"Europe",
         "countryName":"Austria",
         "eigc":18,
+        "eigcContinent":[
+            0,
+            0,
+            18,
+            0,
+            0,
+            0
+        ],
         "flagUrl":"flags/at.png",
         "follow":[
             182,
@@ -2686,6 +3229,14 @@
         "continent":"Europe",
         "countryName":"Azerbaijan",
         "eigc":80,
+        "eigcContinent":[
+            0,
+            0,
+            75,
+            0,
+            5,
+            0
+        ],
         "flagUrl":"flags/az.png",
         "follow":[],
         "follower":[
@@ -2714,6 +3265,7 @@
         "continent":"Europe",
         "countryName":"Belarus",
         "eigc":0,
+        "eigcContinent":[],
         "flagUrl":"flags/by.png",
         "follow":[],
         "follower":[],
@@ -2731,6 +3283,14 @@
         "continent":"Europe",
         "countryName":"Belgium",
         "eigc":0,
+        "eigcContinent":[
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ],
         "flagUrl":"flags/be.png",
         "follow":[
             124,
@@ -2754,6 +3314,7 @@
         "continent":"Europe",
         "countryName":"Bosnia and Herzegovina",
         "eigc":0,
+        "eigcContinent":[],
         "flagUrl":"flags/ba.png",
         "follow":[],
         "follower":[],
@@ -2771,6 +3332,7 @@
         "continent":"Europe",
         "countryName":"Bulgaria",
         "eigc":0,
+        "eigcContinent":[],
         "flagUrl":"flags/bg.png",
         "follow":[],
         "follower":[],
@@ -2788,6 +3350,14 @@
         "continent":"Europe",
         "countryName":"Croatia",
         "eigc":132,
+        "eigcContinent":[
+            0,
+            0,
+            130,
+            2,
+            0,
+            0
+        ],
         "flagUrl":"flags/hr.png",
         "follow":[
             124,
@@ -2841,6 +3411,14 @@
         "continent":"Europe",
         "countryName":"Cyprus",
         "eigc":112,
+        "eigcContinent":[
+            0,
+            32,
+            80,
+            0,
+            0,
+            0
+        ],
         "flagUrl":"flags/cy.png",
         "follow":[
             115,
@@ -2890,6 +3468,14 @@
         "continent":"Europe",
         "countryName":"Czech Republic",
         "eigc":47,
+        "eigcContinent":[
+            0,
+            32,
+            15,
+            0,
+            0,
+            0
+        ],
         "flagUrl":"flags/cz.png",
         "follow":[
             158,
@@ -2916,6 +3502,7 @@
         "continent":"Europe",
         "countryName":"Denmark",
         "eigc":0,
+        "eigcContinent":[],
         "flagUrl":"flags/dk.png",
         "follow":[],
         "follower":[],
@@ -2933,6 +3520,7 @@
         "continent":"Europe",
         "countryName":"Donetsk People's Republic (partially recognised, secessionist state)",
         "eigc":0,
+        "eigcContinent":[],
         "flagUrl":"",
         "follow":[],
         "follower":[],
@@ -2950,6 +3538,14 @@
         "continent":"Europe",
         "countryName":"Estonia",
         "eigc":68,
+        "eigcContinent":[
+            0,
+            0,
+            63,
+            0,
+            5,
+            0
+        ],
         "flagUrl":"flags/ee.png",
         "follow":[
             133,
@@ -2991,6 +3587,14 @@
         "continent":"Europe",
         "countryName":"Finland",
         "eigc":88,
+        "eigcContinent":[
+            0,
+            0,
+            83,
+            0,
+            5,
+            0
+        ],
         "flagUrl":"flags/fi.png",
         "follow":[
             157,
@@ -3039,6 +3643,14 @@
         "continent":"Europe",
         "countryName":"France",
         "eigc":357,
+        "eigcContinent":[
+            92,
+            32,
+            184,
+            40,
+            0,
+            9
+        ],
         "flagUrl":"flags/fr.png",
         "follow":[
             182,
@@ -3135,6 +3747,14 @@
         "continent":"Europe",
         "countryName":"Georgia",
         "eigc":77,
+        "eigcContinent":[
+            0,
+            0,
+            77,
+            0,
+            0,
+            0
+        ],
         "flagUrl":"flags/ge.png",
         "follow":[
             137,
@@ -3198,6 +3818,14 @@
         "continent":"Europe",
         "countryName":"Germany",
         "eigc":43,
+        "eigcContinent":[
+            0,
+            3,
+            40,
+            0,
+            0,
+            0
+        ],
         "flagUrl":"flags/de.png",
         "follow":[
             121,
@@ -3262,6 +3890,14 @@
         "continent":"Europe",
         "countryName":"Greece",
         "eigc":16,
+        "eigcContinent":[
+            0,
+            0,
+            11,
+            0,
+            5,
+            0
+        ],
         "flagUrl":"flags/gr.png",
         "follow":[
             124,
@@ -3289,6 +3925,14 @@
         "continent":"Europe",
         "countryName":"Hungary",
         "eigc":45,
+        "eigcContinent":[
+            0,
+            0,
+            45,
+            0,
+            0,
+            0
+        ],
         "flagUrl":"flags/hu.png",
         "follow":[
             157,
@@ -3340,6 +3984,14 @@
         "continent":"Europe",
         "countryName":"Iceland",
         "eigc":51,
+        "eigcContinent":[
+            0,
+            32,
+            19,
+            0,
+            0,
+            0
+        ],
         "flagUrl":"flags/is.png",
         "follow":[
             183,
@@ -3377,6 +4029,14 @@
         "continent":"Europe",
         "countryName":"Ireland",
         "eigc":38,
+        "eigcContinent":[
+            0,
+            0,
+            38,
+            0,
+            0,
+            0
+        ],
         "flagUrl":"flags/ie.png",
         "follow":[
             157,
@@ -3414,6 +4074,7 @@
         "continent":"Europe",
         "countryName":"Italy",
         "eigc":0,
+        "eigcContinent":[],
         "flagUrl":"flags/it.png",
         "follow":[],
         "follower":[],
@@ -3431,6 +4092,7 @@
         "continent":"Europe",
         "countryName":"Kosovo (partially recognised, secessionist state; under nominal international administration)",
         "eigc":0,
+        "eigcContinent":[],
         "flagUrl":"",
         "follow":[],
         "follower":[],
@@ -3448,6 +4110,14 @@
         "continent":"Europe",
         "countryName":"Latvia",
         "eigc":57,
+        "eigcContinent":[
+            0,
+            0,
+            57,
+            0,
+            0,
+            0
+        ],
         "flagUrl":"flags/lv.png",
         "follow":[
             137,
@@ -3496,6 +4166,7 @@
         "continent":"Europe",
         "countryName":"Liechtenstein",
         "eigc":0,
+        "eigcContinent":[],
         "flagUrl":"flags/li.png",
         "follow":[],
         "follower":[],
@@ -3513,6 +4184,14 @@
         "continent":"Europe",
         "countryName":"Lithuania",
         "eigc":92,
+        "eigcContinent":[
+            0,
+            0,
+            92,
+            0,
+            0,
+            0
+        ],
         "flagUrl":"flags/lt.png",
         "follow":[
             137,
@@ -3574,6 +4253,7 @@
         "continent":"Europe",
         "countryName":"Luhansk People's Republic (partially recognised, secessionist state)",
         "eigc":0,
+        "eigcContinent":[],
         "flagUrl":"",
         "follow":[],
         "follower":[],
@@ -3591,6 +4271,14 @@
         "continent":"Europe",
         "countryName":"Luxembourg",
         "eigc":118,
+        "eigcContinent":[
+            0,
+            0,
+            118,
+            0,
+            0,
+            0
+        ],
         "flagUrl":"flags/lu.png",
         "follow":[
             124,
@@ -3628,6 +4316,7 @@
         "continent":"Europe",
         "countryName":"Malta",
         "eigc":0,
+        "eigcContinent":[],
         "flagUrl":"flags/mt.png",
         "follow":[],
         "follower":[],
@@ -3645,6 +4334,14 @@
         "continent":"Europe",
         "countryName":"Moldova",
         "eigc":36,
+        "eigcContinent":[
+            0,
+            0,
+            36,
+            0,
+            0,
+            0
+        ],
         "flagUrl":"flags/md.png",
         "follow":[
             133,
@@ -3688,6 +4385,7 @@
         "continent":"Europe",
         "countryName":"Monaco",
         "eigc":0,
+        "eigcContinent":[],
         "flagUrl":"flags/mc.png",
         "follow":[],
         "follower":[],
@@ -3705,6 +4403,14 @@
         "continent":"Europe",
         "countryName":"Montenegro",
         "eigc":64,
+        "eigcContinent":[
+            0,
+            0,
+            64,
+            0,
+            0,
+            0
+        ],
         "flagUrl":"flags/me.png",
         "follow":[
             116,
@@ -3758,6 +4464,14 @@
         "continent":"Europe",
         "countryName":"Netherlands",
         "eigc":143,
+        "eigcContinent":[
+            0,
+            32,
+            111,
+            0,
+            0,
+            0
+        ],
         "flagUrl":"flags/nl.png",
         "follow":[],
         "follower":[
@@ -3788,6 +4502,14 @@
         "continent":"Europe",
         "countryName":"North Macedonia ",
         "eigc":23,
+        "eigcContinent":[
+            0,
+            0,
+            23,
+            0,
+            0,
+            0
+        ],
         "flagUrl":"",
         "follow":[
             124,
@@ -3840,6 +4562,7 @@
         "continent":"Europe",
         "countryName":"Northern Cyprus (unrecognised, secessionist state)",
         "eigc":0,
+        "eigcContinent":[],
         "flagUrl":"",
         "follow":[],
         "follower":[],
@@ -3857,6 +4580,7 @@
         "continent":"Europe",
         "countryName":"Norway",
         "eigc":0,
+        "eigcContinent":[],
         "flagUrl":"flags/no.png",
         "follow":[],
         "follower":[],
@@ -3874,6 +4598,14 @@
         "continent":"Europe",
         "countryName":"Poland",
         "eigc":55,
+        "eigcContinent":[
+            0,
+            0,
+            50,
+            0,
+            5,
+            0
+        ],
         "flagUrl":"flags/pl.png",
         "follow":[
             157
@@ -3902,6 +4634,14 @@
         "continent":"Europe",
         "countryName":"Portugal",
         "eigc":5,
+        "eigcContinent":[
+            0,
+            0,
+            5,
+            0,
+            0,
+            0
+        ],
         "flagUrl":"flags/pt.png",
         "follow":[
             182
@@ -3923,6 +4663,14 @@
         "continent":"Europe",
         "countryName":"Romania",
         "eigc":99,
+        "eigcContinent":[
+            0,
+            0,
+            99,
+            0,
+            0,
+            0
+        ],
         "flagUrl":"flags/ro.png",
         "follow":[
             139,
@@ -3988,6 +4736,14 @@
         "continent":"Europe",
         "countryName":"Russia",
         "eigc":109,
+        "eigcContinent":[
+            15,
+            32,
+            58,
+            0,
+            4,
+            0
+        ],
         "flagUrl":"flags/ru.png",
         "follow":[],
         "follower":[
@@ -4019,6 +4775,7 @@
         "continent":"Europe",
         "countryName":"San Marino",
         "eigc":0,
+        "eigcContinent":[],
         "flagUrl":"flags/sm.png",
         "follow":[],
         "follower":[],
@@ -4036,6 +4793,14 @@
         "continent":"Europe",
         "countryName":"Serbia",
         "eigc":70,
+        "eigcContinent":[
+            0,
+            0,
+            70,
+            0,
+            0,
+            0
+        ],
         "flagUrl":"flags/rs.png",
         "follow":[
             124,
@@ -4080,6 +4845,14 @@
         "continent":"Europe",
         "countryName":"Slovakia",
         "eigc":60,
+        "eigcContinent":[
+            0,
+            0,
+            60,
+            0,
+            0,
+            0
+        ],
         "flagUrl":"flags/cs.png",
         "follow":[
             117,
@@ -4148,6 +4921,14 @@
         "continent":"Europe",
         "countryName":"Slovenia",
         "eigc":85,
+        "eigcContinent":[
+            0,
+            0,
+            85,
+            0,
+            0,
+            0
+        ],
         "flagUrl":"flags/si.png",
         "follow":[
             157,
@@ -4215,6 +4996,7 @@
         "continent":"Europe",
         "countryName":"South Ossetia (partially recognised, secessionist state)",
         "eigc":0,
+        "eigcContinent":[],
         "flagUrl":"",
         "follow":[],
         "follower":[],
@@ -4232,6 +5014,7 @@
         "continent":"Europe",
         "countryName":"Spain",
         "eigc":0,
+        "eigcContinent":[],
         "flagUrl":"flags/es.png",
         "follow":[],
         "follower":[],
@@ -4249,6 +5032,7 @@
         "continent":"Europe",
         "countryName":"Sweden",
         "eigc":0,
+        "eigcContinent":[],
         "flagUrl":"flags/se.png",
         "follow":[],
         "follower":[],
@@ -4266,6 +5050,7 @@
         "continent":"Europe",
         "countryName":"Switzerland",
         "eigc":0,
+        "eigcContinent":[],
         "flagUrl":"flags/ch.png",
         "follow":[],
         "follower":[],
@@ -4283,6 +5068,7 @@
         "continent":"Europe",
         "countryName":"Transnistria (unrecognized, secessionist state)",
         "eigc":0,
+        "eigcContinent":[],
         "flagUrl":"",
         "follow":[],
         "follower":[],
@@ -4300,6 +5086,14 @@
         "continent":"Europe",
         "countryName":"Ukraine",
         "eigc":157,
+        "eigcContinent":[
+            0,
+            0,
+            152,
+            0,
+            5,
+            0
+        ],
         "flagUrl":"flags/ua.png",
         "follow":[],
         "follower":[
@@ -4338,6 +5132,14 @@
         "continent":"Europe",
         "countryName":"United Kingdom",
         "eigc":233,
+        "eigcContinent":[
+            27,
+            35,
+            152,
+            1,
+            9,
+            9
+        ],
         "flagUrl":"flags/gb.png",
         "follow":[
             157,
@@ -4401,6 +5203,14 @@
         "continent":"Europe",
         "countryName":"Vatican City",
         "eigc":161,
+        "eigcContinent":[
+            71,
+            0,
+            65,
+            14,
+            11,
+            0
+        ],
         "flagUrl":"flags/va.png",
         "follow":[],
         "follower":[
@@ -4447,6 +5257,7 @@
         "continent":"North America",
         "countryName":"Antigua and Barbuda",
         "eigc":0,
+        "eigcContinent":[],
         "flagUrl":"flags/ag.png",
         "follow":[],
         "follower":[],
@@ -4464,6 +5275,14 @@
         "continent":"North America",
         "countryName":"The Bahamas",
         "eigc":0,
+        "eigcContinent":[
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ],
         "flagUrl":"flags/bf.png",
         "follow":[],
         "follower":[],
@@ -4481,6 +5300,14 @@
         "continent":"North America",
         "countryName":"Barbados",
         "eigc":2,
+        "eigcContinent":[
+            0,
+            0,
+            0,
+            2,
+            0,
+            0
+        ],
         "flagUrl":"flags/bb.png",
         "follow":[
             40,
@@ -4509,6 +5336,14 @@
         "continent":"North America",
         "countryName":"Belize",
         "eigc":4,
+        "eigcContinent":[
+            0,
+            0,
+            0,
+            4,
+            0,
+            0
+        ],
         "flagUrl":"flags/bz.png",
         "follow":[
             171,
@@ -4538,6 +5373,14 @@
         "continent":"North America",
         "countryName":"Canada",
         "eigc":248,
+        "eigcContinent":[
+            24,
+            36,
+            157,
+            17,
+            5,
+            9
+        ],
         "flagUrl":"flags/ca.png",
         "follow":[
             182,
@@ -4596,6 +5439,7 @@
         "continent":"North America",
         "countryName":"Costa Rica",
         "eigc":0,
+        "eigcContinent":[],
         "flagUrl":"flags/cr.png",
         "follow":[],
         "follower":[],
@@ -4613,6 +5457,14 @@
         "continent":"North America",
         "countryName":"Cuba",
         "eigc":26,
+        "eigcContinent":[
+            0,
+            0,
+            0,
+            17,
+            9,
+            0
+        ],
         "flagUrl":"flags/cu.png",
         "follow":[
             159,
@@ -4650,6 +5502,14 @@
         "continent":"North America",
         "countryName":"Dominica",
         "eigc":35,
+        "eigcContinent":[
+            0,
+            32,
+            0,
+            0,
+            0,
+            3
+        ],
         "flagUrl":"flags/dm.png",
         "follow":[
             162,
@@ -4679,6 +5539,14 @@
         "continent":"North America",
         "countryName":"Dominican Republic",
         "eigc":7,
+        "eigcContinent":[
+            0,
+            0,
+            0,
+            7,
+            0,
+            0
+        ],
         "flagUrl":"flags/do.png",
         "follow":[
             200,
@@ -4708,6 +5576,14 @@
         "continent":"North America",
         "countryName":"El Salvador",
         "eigc":1,
+        "eigcContinent":[
+            0,
+            0,
+            0,
+            1,
+            0,
+            0
+        ],
         "flagUrl":"flags/sv.png",
         "follow":[
             173,
@@ -4732,6 +5608,7 @@
         "continent":"North America",
         "countryName":"Grenada",
         "eigc":0,
+        "eigcContinent":[],
         "flagUrl":"flags/gd.png",
         "follow":[],
         "follower":[],
@@ -4749,6 +5626,14 @@
         "continent":"North America",
         "countryName":"Guatemala",
         "eigc":4,
+        "eigcContinent":[
+            0,
+            0,
+            0,
+            4,
+            0,
+            0
+        ],
         "flagUrl":"flags/gt.png",
         "follow":[
             163,
@@ -4780,6 +5665,7 @@
         "continent":"North America",
         "countryName":"Haiti",
         "eigc":0,
+        "eigcContinent":[],
         "flagUrl":"flags/ht.png",
         "follow":[],
         "follower":[],
@@ -4797,6 +5683,14 @@
         "continent":"North America",
         "countryName":"Honduras",
         "eigc":14,
+        "eigcContinent":[
+            0,
+            0,
+            0,
+            14,
+            0,
+            0
+        ],
         "flagUrl":"flags/hn.png",
         "follow":[
             168,
@@ -4828,6 +5722,14 @@
         "continent":"North America",
         "countryName":"Jamaica",
         "eigc":4,
+        "eigcContinent":[
+            0,
+            0,
+            0,
+            1,
+            0,
+            3
+        ],
         "flagUrl":"flags/jm.png",
         "follow":[
             164,
@@ -4851,6 +5753,14 @@
         "continent":"North America",
         "countryName":"Mexico",
         "eigc":103,
+        "eigcContinent":[
+            0,
+            0,
+            51,
+            45,
+            7,
+            0
+        ],
         "flagUrl":"flags/mx.png",
         "follow":[
             200,
@@ -4899,6 +5809,7 @@
         "continent":"North America",
         "countryName":"Nicaragua",
         "eigc":0,
+        "eigcContinent":[],
         "flagUrl":"flags/ni.png",
         "follow":[],
         "follower":[],
@@ -4916,6 +5827,14 @@
         "continent":"North America",
         "countryName":"Panama",
         "eigc":2,
+        "eigcContinent":[
+            0,
+            0,
+            0,
+            2,
+            0,
+            0
+        ],
         "flagUrl":"flags/pa.png",
         "follow":[
             202,
@@ -4945,6 +5864,7 @@
         "continent":"North America",
         "countryName":"Saint Kitts and Nevis",
         "eigc":0,
+        "eigcContinent":[],
         "flagUrl":"flags/kn.png",
         "follow":[],
         "follower":[],
@@ -4962,6 +5882,7 @@
         "continent":"North America",
         "countryName":"Saint Lucia",
         "eigc":0,
+        "eigcContinent":[],
         "flagUrl":"flags/lc.png",
         "follow":[],
         "follower":[],
@@ -4979,6 +5900,7 @@
         "continent":"North America",
         "countryName":"Saint Vincent and the Grenadines",
         "eigc":0,
+        "eigcContinent":[],
         "flagUrl":"flags/vc.png",
         "follow":[],
         "follower":[],
@@ -4996,6 +5918,7 @@
         "continent":"North America",
         "countryName":"Trinidad and Tobago",
         "eigc":0,
+        "eigcContinent":[],
         "flagUrl":"flags/tt.png",
         "follow":[],
         "follower":[],
@@ -5013,6 +5936,14 @@
         "continent":"North America",
         "countryName":"United States",
         "eigc":283,
+        "eigcContinent":[
+            15,
+            7,
+            216,
+            32,
+            4,
+            9
+        ],
         "flagUrl":"flags/us.png",
         "follow":[],
         "follower":[
@@ -5071,6 +6002,14 @@
         "continent":"Oceania",
         "countryName":"Australia",
         "eigc":51,
+        "eigcContinent":[
+            0,
+            36,
+            12,
+            0,
+            0,
+            3
+        ],
         "flagUrl":"flags/au.png",
         "follow":[
             158,
@@ -5111,6 +6050,14 @@
         "continent":"Oceania",
         "countryName":"Fiji",
         "eigc":45,
+        "eigcContinent":[
+            7,
+            32,
+            0,
+            0,
+            0,
+            6
+        ],
         "flagUrl":"flags/fj.png",
         "follow":[
             183,
@@ -5147,6 +6094,7 @@
         "continent":"Oceania",
         "countryName":"Kiribati",
         "eigc":0,
+        "eigcContinent":[],
         "flagUrl":"flags/ki.png",
         "follow":[],
         "follower":[],
@@ -5164,6 +6112,7 @@
         "continent":"Oceania",
         "countryName":"Marshall Islands",
         "eigc":0,
+        "eigcContinent":[],
         "flagUrl":"flags/mh.png",
         "follow":[],
         "follower":[],
@@ -5181,6 +6130,7 @@
         "continent":"Oceania",
         "countryName":"Micronesia",
         "eigc":0,
+        "eigcContinent":[],
         "flagUrl":"flags/fm.png",
         "follow":[],
         "follower":[],
@@ -5198,6 +6148,7 @@
         "continent":"Oceania",
         "countryName":"Nauru",
         "eigc":0,
+        "eigcContinent":[],
         "flagUrl":"flags/nr.png",
         "follow":[],
         "follower":[],
@@ -5215,6 +6166,14 @@
         "continent":"Oceania",
         "countryName":"New Zealand",
         "eigc":39,
+        "eigcContinent":[
+            0,
+            32,
+            4,
+            0,
+            0,
+            3
+        ],
         "flagUrl":"flags/nz.png",
         "follow":[],
         "follower":[
@@ -5236,6 +6195,7 @@
         "continent":"Oceania",
         "countryName":"Palau",
         "eigc":0,
+        "eigcContinent":[],
         "flagUrl":"flags/pw.png",
         "follow":[],
         "follower":[],
@@ -5253,6 +6213,7 @@
         "continent":"Oceania",
         "countryName":"Papua New Guinea",
         "eigc":0,
+        "eigcContinent":[],
         "flagUrl":"flags/pg.png",
         "follow":[],
         "follower":[],
@@ -5270,6 +6231,7 @@
         "continent":"Oceania",
         "countryName":"Samoa",
         "eigc":0,
+        "eigcContinent":[],
         "flagUrl":"flags/ws.png",
         "follow":[],
         "follower":[],
@@ -5287,6 +6249,7 @@
         "continent":"Oceania",
         "countryName":"Solomon Islands",
         "eigc":0,
+        "eigcContinent":[],
         "flagUrl":"flags/sb.png",
         "follow":[],
         "follower":[],
@@ -5304,6 +6267,7 @@
         "continent":"Oceania",
         "countryName":"Tonga",
         "eigc":0,
+        "eigcContinent":[],
         "flagUrl":"flags/tg.png",
         "follow":[],
         "follower":[],
@@ -5321,6 +6285,7 @@
         "continent":"Oceania",
         "countryName":"Tuvalu",
         "eigc":0,
+        "eigcContinent":[],
         "flagUrl":"flags/tv.png",
         "follow":[],
         "follower":[],
@@ -5338,6 +6303,7 @@
         "continent":"Oceania",
         "countryName":"Vanuatu",
         "eigc":0,
+        "eigcContinent":[],
         "flagUrl":"flags/vu.png",
         "follow":[],
         "follower":[],
@@ -5355,6 +6321,14 @@
         "continent":"South America",
         "countryName":"Argentina",
         "eigc":0,
+        "eigcContinent":[
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ],
         "flagUrl":"flags/ar.png",
         "follow":[],
         "follower":[],
@@ -5372,6 +6346,14 @@
         "continent":"South America",
         "countryName":"Bolivia",
         "eigc":23,
+        "eigcContinent":[
+            0,
+            0,
+            0,
+            18,
+            5,
+            0
+        ],
         "flagUrl":"flags/bo.png",
         "follow":[
             147,
@@ -5406,6 +6388,14 @@
         "continent":"South America",
         "countryName":"Brazil",
         "eigc":12,
+        "eigcContinent":[
+            0,
+            0,
+            8,
+            1,
+            3,
+            0
+        ],
         "flagUrl":"flags/br.png",
         "follow":[
             182,
@@ -5436,6 +6426,14 @@
         "continent":"South America",
         "countryName":"Chile",
         "eigc":19,
+        "eigcContinent":[
+            0,
+            0,
+            4,
+            13,
+            2,
+            0
+        ],
         "flagUrl":"flags/cl.png",
         "follow":[
             164,
@@ -5468,6 +6466,7 @@
         "continent":"South America",
         "countryName":"Colombia",
         "eigc":0,
+        "eigcContinent":[],
         "flagUrl":"flags/co.png",
         "follow":[],
         "follower":[],
@@ -5485,6 +6484,14 @@
         "continent":"South America",
         "countryName":"Ecuador",
         "eigc":2,
+        "eigcContinent":[
+            0,
+            0,
+            0,
+            1,
+            1,
+            0
+        ],
         "flagUrl":"flags/ec.png",
         "follow":[
             200,
@@ -5508,6 +6515,7 @@
         "continent":"South America",
         "countryName":"Guyana",
         "eigc":0,
+        "eigcContinent":[],
         "flagUrl":"flags/gy.png",
         "follow":[],
         "follower":[],
@@ -5525,6 +6533,14 @@
         "continent":"South America",
         "countryName":"Paraguay",
         "eigc":6,
+        "eigcContinent":[
+            0,
+            0,
+            0,
+            1,
+            5,
+            0
+        ],
         "flagUrl":"flags/py.png",
         "follow":[
             199,
@@ -5553,6 +6569,14 @@
         "continent":"South America",
         "countryName":"Peru",
         "eigc":0,
+        "eigcContinent":[
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ],
         "flagUrl":"flags/pe.png",
         "follow":[
             173,
@@ -5579,6 +6603,7 @@
         "continent":"South America",
         "countryName":"Suriname",
         "eigc":0,
+        "eigcContinent":[],
         "flagUrl":"flags/sr.png",
         "follow":[],
         "follower":[],
@@ -5596,6 +6621,14 @@
         "continent":"South America",
         "countryName":"Uruguay",
         "eigc":1,
+        "eigcContinent":[
+            0,
+            0,
+            0,
+            1,
+            0,
+            0
+        ],
         "flagUrl":"flags/uy.png",
         "follow":[
             204,
@@ -5619,6 +6652,14 @@
         "continent":"South America",
         "countryName":"Venezuela",
         "eigc":12,
+        "eigcContinent":[
+            0,
+            0,
+            0,
+            8,
+            4,
+            0
+        ],
         "flagUrl":"flags/ve.png",
         "follow":[
             198,
@@ -5651,6 +6692,7 @@
         "continent":"South America",
         "countryName":"Venezuelan opposition (partially recognised, rival government)",
         "eigc":0,
+        "eigcContinent":[],
         "flagUrl":"",
         "follow":[],
         "follower":[],

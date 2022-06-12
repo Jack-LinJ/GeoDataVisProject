@@ -1,17 +1,43 @@
-
 <!-- <!DOCTYPE html> -->
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>推特外交大赏</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <header>
-        <h1>推特外交大赏</h1>
-    </header>
     
+    <header>
+        <div style="display:inline-flex;margin: auto auto;justify-content: center;align-items: center;width: 100%;">
+            <img src="images/twitter.png" alt="" style="height: 80px; width:80px;margin-right: 20px;">
+            <h1>世界各国推特影响力</h1>
+        </div>
+
+    </header>
+    <div class="index-bg">
+        <div class="stars">
+            <div class="star"></div>
+            <div class="star" style="top: 40px; left: 646px; animation-delay: 4s;"></div>
+            <div class="star" style="top: 120px; left: 395px; animation-delay: 6s;"></div>
+            <div class="star" style="top: 200px; left: 120px; animation-delay: 14s;"></div>
+            <div class="star" style="top: 280px; left: 276px; animation-delay: 14s;"></div>
+            <div class="star" style="top: 340px; left: 600px; animation-delay: 7s;"></div>
+            <div class="star" style="top: 390px; left: 720px; animation-delay: 9s;"></div>
+            <div class="star" style="top: 470px; left: 800px; animation-delay: 3s;"></div>
+            <div class="star" style="top: 410px; left: 380px; animation-delay: 10s;"></div>
+            <div class="star" style="top: 450px; left: 420px; animation-delay: 11s;"></div>
+            <div class="star" style="top: 520px; left: 240px; animation-delay: 1s;"></div>
+            <div class="star" style="top: 570px; left: 750px; animation-delay: 19s;"></div>
+            <div class="star" style="top: 610px; left: 800px; animation-delay: 18s;"></div>
+            <div class="star" style="top: 670px; left: 340px; animation-delay: 15s;"></div>
+            <div class="star" style="top: 710px; left: 650px; animation-delay: 7s;"></div>
+
+
+        </div>
+    </div>
     <div style="display: inline-flex;width:100%;height:74%">
         <div style="width: 16%;margin-left: 1%;">
             <div style="height: auto;min-height:320px;margin-top: 10px;width: 100%;" class="panel">
@@ -23,11 +49,13 @@
                     <img id="flag" alt="" style="width: 70%;height: auto;">
                 </div>
                 <div id="countryName" style="font-size: 25px;margin: 10px;text-align: center;"></div>
+                <div id="eigc" class="no" style="font-size: 25px;text-align: center;"></div>
                 <div id="no" class="no" style="font-size: 25px;text-align: center;"></div>
+
                 <div class="panel-footer"></div>
             </div>
-    
-    
+
+
             <div style="height: 280px;margin-top: 30px;width: 100%;" class="panel">
                 <div class="title-box">
                     <div class="breathe circle"></div>
@@ -47,31 +75,33 @@
 
             </div>
 
-            <div style="height: 280px;margin-top: 30px;width: 100%;" class="panel" style="flex-direction: column;display: flex;">
+            <div style="height: 280px;margin-top: 30px;width: 100%;" class="panel"
+                style="flex-direction: column;display: flex;">
                 <div class="title-box">
                     <div class="breathe circle"></div>
                     <div>颜色说明</div>
                 </div>
                 <div style="display: flex;flex-direction:column;margin-left: 40px;margin-top: 13px;">
-                    <div class="colorIntro">
-                        <div id="noTwitter" class="colorBlock"></div>
-                        <div>没有推特国家</div>
-                    </div>
+
                     <div class="colorIntro">
                         <div id="selected" class="colorBlock"></div>
                         <div>选中国家</div>
                     </div>
                     <div class="colorIntro">
                         <div id="follow" class="colorBlock"></div>
-                        <div>关注国家</div>
+                        <div id="followText" onclick="disableVisual(0)">关注国家</div>
                     </div>
                     <div class="colorIntro">
                         <div id="follower" class="colorBlock"></div>
-                        <div>被关注国家</div>
+                        <div id="followerText" onclick="disableVisual(1)">被关注国家</div>
                     </div>
                     <div class="colorIntro">
                         <div id="mutualfollow" class="colorBlock"></div>
-                        <div>互关国家</div>
+                        <div id="mutualfollowText" onclick="disableVisual(2)">互关国家</div>
+                    </div>
+                    <div class="colorIntro">
+                        <div id="noTwitter" class="colorBlock"></div>
+                        <div id="noTwitterText" onclick="disableVisual(3)">未开通推特国家</div>
                     </div>
                 </div>
 
@@ -81,24 +111,41 @@
         </div>
 
 
-        <div class="map" style="height: 98%;width: 66%;">
-            <div class="map1"></div>
+        <div class="map" style="height: 98%;width: 66%;margin-top: 80px;">
+            <!-- <div class="map1"></div>
             <div class="map2"></div>
-            <div class="map3"></div>
-            <div id="world" class="chart" ></div>
-          </div>
-        <!-- <div id="world" style="height: 98%;width: 66%;"></div> -->
+            <div class="map3"></div> -->
 
-        <div style="height: 100%;margin: auto 0px ;width: 16%;" class="panel">
-
-
-            <div class="information">
-
-            </div>
-            <div class="panel-footer"></div>
+            <div id="world" class="chart"></div>
         </div>
+        <!-- <div id="world" style="height: 98%;width: 66%;"></div> -->
+        <div style="width: 16%;margin-right: 1%;">
+            <div style="height: 350px;margin: 0px 0px ;width: 100%;" class="panel">
+                <div class="title-box">
+                    <div class="breathe circle"></div>
+                    <div>影响力组成</div>
+                </div>
+                <div id="notice1" hidden style="font-size: 28px;margin-top: 25px;text-align: center;">该国未开通推特</div>
+                <div id="pie" style="height: 350px;width:300px;margin: auto;"></div>
+                <div class="panel-footer"></div>
+            </div>
+
+            <div style="height: 350px;margin-top: 30px;width: 100%;" class="panel">
+                <div class="title-box">
+                    <div class="breathe circle"></div>
+                    <div>在各州影响力</div>
+                </div>
+                <div id="notice2" hidden style="font-size: 28px;margin-top: 25px;text-align: center;">该国未开通推特</div>
+
+                <div id="bar" style="height: 330px;width:auto;margin: auto;"></div>
+                <div class="panel-footer"></div>
+            </div>
+        </div>
+
+
+
     </div>
-    <div style="display: inline-flex;width:100%;height:26%;"> </div>
+    <!-- <div style="display: inline-flex;width:100%;height:26%;"> </div> -->
 </body>
 
 </html>

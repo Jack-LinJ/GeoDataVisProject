@@ -1,10 +1,10 @@
 // 定义颜色
 var noTwitter_color = 'black';
-var normal_color = 'rgba(15,248,251,0.65)';
-var selected_color = 'green';
-var follow_color = 'yellow';
-var follower_color = 'red';
-var mutualfollow_color = 'pink';
+var normal_color = 'rgba(0,191,255,1)';
+var selected_color = '#7b68ee';
+var follow_color = 'rgb(216,82,19)';
+var follower_color = 'rgb(242,194,0)';
+var mutualfollow_color = 'rgb(9,212,163)';
 
 // 设置图例颜色
 document.getElementById('selected').style['background-color'] = selected_color;
@@ -13,17 +13,57 @@ document.getElementById('follower').style['background-color'] = follower_color;
 document.getElementById('mutualfollow').style['background-color'] = mutualfollow_color;
 document.getElementById('noTwitter').style['background-color'] = noTwitter_color;
 
+// 设置图例是否显示
+var visual = [true, true, true, true]  // 关注、被关注、互关、无推特
+var visualId = ['followText','followerText','mutualfollowText','noTwitterText']
+
+function disableVisual(id) {
+    if(visual[id]){
+        visual[id] = !visual[id]
+        document.getElementById(visualId[id]).style['text-decoration'] = 'line-through'
+        document.getElementById(visualId[id]).style['color'] = 'gray'
+        resetOption()
+        setOption(selectedId)
+    }
+    else{
+        visual[id] = !visual[id]
+        document.getElementById(visualId[id]).style['text-decoration'] = 'none'
+        document.getElementById(visualId[id]).style['color'] = 'rgb(15, 248, 251)'
+        resetOption()
+        setOption(selectedId)
+    }
+
+
+}
 
 var myChart = echarts.init(document.getElementById('world'));
-
+var selectedId = -1;
 // 点击国家后显示该国信息
 myChart.on('click', function (params) {
-    console.log('点击', params.name)
+    console.log('点击', params.name);
     // console.log(option.geo.regions[0].itemStyle.areaColor, option.geo.zoom, option.geo.center)
     let id = country2id[params.name];
-    console.log("id", id)
+    console.log("id", id);
+    selectedId = id - 1;
     // excel编号从1开始了
-    setOption(id - 1)
+    setOption(selectedId);
+    if (countryData[selectedId].tState == 0) {
+        document.getElementById('notice1').hidden = false
+        document.getElementById('notice2').hidden = false
+        document.getElementById('pie').hidden = true
+        document.getElementById('bar').hidden = true
+
+    }
+    else {
+
+        document.getElementById('notice1').hidden = true
+        document.getElementById('notice2').hidden = true
+        document.getElementById('pie').hidden = false
+        document.getElementById('bar').hidden = false
+
+        drawPie(selectedId);
+        drawBar(selectedId);
+    }
 })
 
 // 重置option
@@ -37,39 +77,77 @@ var resetOption = function () {
 
 // 设置option
 var setOption = function (id) {
-    resetOption()
-    console.log(option.geo.regions[id])
+    if (id != -1) {
+        resetOption()
+        console.log(option.geo.regions[id])
 
-    let country = countryData[id]
-    
-    document.getElementById('countryName').innerHTML = country.countryName
-    document.getElementById('twitter').innerHTML = country.twitter
-    document.getElementById('name').innerHTML = country.name
-    document.getElementById('position').innerHTML = country.position
-    document.getElementById('flag').src = country.flagUrl
-    document.getElementById('no').innerHTML = '影响力排名' + country.no
+        let country = countryData[id]
 
-    // document.getElementById('avatar').src = country.avatarUrl
+        document.getElementById('countryName').innerHTML = country.countryName
+        document.getElementById('twitter').innerHTML = country.twitter
+        document.getElementById('name').innerHTML = country.name
+        document.getElementById('position').innerHTML = country.position
+        document.getElementById('flag').src = country.flagUrl
+        document.getElementById('no').innerHTML = '影响力排名：' + country.no
+        document.getElementById('eigc').innerHTML = 'EIGC：' + country.eigc
 
-    // 设置新的地图颜色
-    // 该国变绿
-    option.geo.regions[id].itemStyle.areaColor = selected_color;
-    // 由于id从0开始，每个索引需要-1
-    // 该国家关注的国家变红
-    for (let i in country.follow) {
-        console.log("follow:", country.follow[i])
-        // print("tar",country.follow[i])
-        option.geo.regions[country.follow[i] - 1].itemStyle.areaColor = follow_color;
+
+
+        // 设置新的地图颜色
+
+        // 由于id从0开始，每个索引需要-1
+        // 该国家关注的国家变红
+        if (visual[0]) {
+            for (let i in country.follow) {
+                // console.log("follow:", country.follow[i])
+                // print("tar",country.follow[i])
+                option.geo.regions[country.follow[i] - 1].itemStyle.areaColor = follow_color;
+            }
+        }
+        else {
+            for (let i in country.follow) {
+                option.geo.regions[country.follow[i] - 1].itemStyle.areaColor = normal_color;
+            }
+        }
+        // 关注该国家的国家变黄
+        if (visual[1]) {
+            for (let i in country.follower) {
+                option.geo.regions[country.follower[i] - 1].itemStyle.areaColor = follower_color;
+            }
+        }
+        else {
+            for (let i in country.follower) {
+                option.geo.regions[country.follower[i] - 1].itemStyle.areaColor = normal_color;
+            }
+        }
+
+        // 互关国家变粉
+        if (visual[2]) {
+            for (let i in country.mutualFollower) {
+                option.geo.regions[country.mutualFollower[i] - 1].itemStyle.areaColor = mutualfollow_color;
+            }
+        }
+        else {
+            for (let i in country.mutualFollower) {
+                option.geo.regions[country.mutualFollower[i] - 1].itemStyle.areaColor = mutualfollow_color;
+            }
+        }
+
+        // 无推特国家变黑
+        if (visual[3]) {
+            for (let i in option.geo.regions) {
+                console.log(countryData[country2id[(option.geo.regions[i].name)] - 1])
+                if (countryData[country2id[option.geo.regions[i].name] - 1].tState == 0) {
+                    option.geo.regions[i].itemStyle.areaColor = noTwitter_color
+                }
+
+            }
+        }
+
+        // 该国变绿
+        option.geo.regions[id].itemStyle.areaColor = selected_color;
+        myChart.setOption(option)
     }
-    // 关注该国家的国家变黄
-    for (let i in country.follower) {
-        option.geo.regions[country.follower[i] - 1].itemStyle.areaColor = follower_color;
-    }
-    // 互关国家变粉
-    for (let i in country.mutualFollower) {
-        option.geo.regions[country.mutualFollower[i] - 1].itemStyle.areaColor = mutualfollow_color;
-    }
-    myChart.setOption(option)
 }
 
 // 国家名称中英对照
@@ -378,7 +456,7 @@ $.getJSON('text3.json', function (data) {
                     // shadowColor: "#01012a"
                 },
                 emphasis: {
-                    areaColor: "#2B91B7",
+                    areaColor: "rgba(65,105,225)",
                     shadowOffsetX: 0,
                     shadowOffsetY: 0,
                     shadowBlur: 5,
@@ -427,4 +505,202 @@ function dataInit() {
     }
 }
 
+// 绘制饼图
+function drawPie(id) {
+    var pieChart = echarts.init(document.getElementById('pie'))
+    console.log(countryData[id], countryData[id].follow.length)
+    let color0 = 'rgba(255,255,255,0.8)'
+    let pieData = [
+        {
+            value: countryData[id].follow.length == 0 ? null : countryData[id].follow.length,
+            name: "关注数",
+            itemStyle: {
+                color: {
+                    type: 'linear',
+                    x: 0,  //右
+                    y: 0,  //下
+                    x2: 1,  //左
+                    y2: 0,  //上
+                    colorStops: [
+                        {
+                            offset: 0,
+                            color: color0 // 0% 处的颜色
+                        },
 
+                        {
+                            offset: 1,
+                            color: follow_color // 100% 处的颜色
+                        }
+                    ]
+                }
+
+            }
+        },
+        {
+            value: countryData[id].follower.length == 0 ? null : countryData[id].follower.length,
+            name: "被关注数",
+            itemStyle: {
+                color: {
+                    type: 'linear',
+                    x: 0,  //右
+                    y: 0,  //下
+                    x2: 1,  //左
+                    y2: 0,  //上
+                    colorStops: [
+                        {
+                            offset: 0,
+                            color: color0 // 0% 处的颜色
+                        },
+
+                        {
+                            offset: 1,
+                            color: follower_color // 100% 处的颜色
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            value: countryData[id].mutualFollower.length == 0 ? null : countryData[id].mutualFollower.length,
+            name: "互关数",
+            itemStyle: {
+                color: {
+                    type: 'linear',
+                    x: 0,  //右
+                    y: 0,  //下
+                    x2: 1,  //左
+                    y2: 0,  //上
+                    colorStops: [
+                        {
+                            offset: 0,
+                            color: color0 // 0% 处的颜色
+                        },
+
+                        {
+                            offset: 1,
+                            color: mutualfollow_color // 100% 处的颜色
+                        }
+                    ]
+                }
+            }
+        },
+    ]
+    let optionPie = {
+        tooltip: {
+            trigger: 'item'
+        },
+        // legend: {
+        //     orient: 'vertical',
+        //     left: 'left'
+        //   },
+        series: [
+            {
+                type: 'pie',
+                radius: ['40%', '70%'],
+                avoidLabelOverlap: false,
+                itemStyle: {
+                    // borderRadius: 4,
+                    borderColor: 'rgb(8,14,60)',
+                    borderWidth: 5
+                },
+                label: {
+                    show: true,
+                    position: 'inner',
+                    color: 'black'
+                },
+                emphasis: {
+                    label: {
+                        show: true,
+                        fontSize: '40',
+                        fontWeight: 'bold'
+                    }
+                },
+                labelLine: {
+                    show: true
+                },
+                data: pieData,
+                emphasis: {
+                    itemStyle: {
+                        shadowBlur: 10,
+                        shadowOffsetX: 0,
+                        shadowColor: 'rgba(0, 0, 0, 0.5)'
+                    }
+                }
+            }
+        ]
+    }
+    pieChart.setOption(optionPie)
+}
+
+function drawBar(id) {
+    var barChart = echarts.init(document.getElementById('bar'))
+
+    // 计算各州的关注、被关注、互关数
+    let continent2index = {
+        'Africa': 0,
+        'South Africa': 1,
+        'Asia': 2,
+        'Europe': 3,
+        'North America': 4,
+        'South America': 5,
+        'Oceania': 6
+    }
+    // 各洲统计数据
+    // let barData = countryData[id].eigcContinent
+    let barOption = {
+        xAxis: {
+            type: 'category',
+            data: [
+                '非洲',
+                '亚洲',
+                '欧洲',
+                '北美',
+                '南美',
+                '大洋洲'
+            ],
+            axisLabel: {
+                interval: 0,
+                // rotate: 30
+            }
+        },
+        yAxis: {
+            type: 'value'
+        },
+
+        textStyle: {
+            color: 'white'
+        },
+
+        series: [
+            {
+                data: countryData[id].eigcContinent,
+                // data:[1,2,3,4,5,6,7],
+                type: 'bar',
+                itemStyle: {
+                    color: {
+                        type: 'linear',
+                        x: 0,  //右
+                        y: 1,  //下
+                        x2: 0,  //左
+                        y2: 0,  //上
+                        colorStops: [
+                            {
+                                offset: 0,
+                                color: '#2e3192' // 0% 处的颜色
+                            },
+
+                            {
+                                offset: 1,
+                                color: '#1bffff' // 100% 处的颜色
+                            }
+                        ]
+                    }
+                },
+                barWidth: '60%',
+
+            }
+        ]
+    }
+    barChart.setOption(barOption)
+
+}

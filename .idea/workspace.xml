@@ -27,6 +27,10 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
   <component name="RunManager">
     <configuration name="nameMap" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="GeoDataVisProject" />
@@ -53,11 +57,12 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="bb819ef6-5208-4ea6-8b2d-cad75232d830" name="Changes" comment="" />
+      <changelist id="85346c75-4aef-4387-b0de-0ddd3eadaa1e" name="Changes" comment="test push" />
       <created>1655005133162</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1655005133162</updated>
+      <workItem from="1655037724666" duration="385000" />
     </task>
     <task id="LOCAL-00001" summary="test push">
       <created>1655035484399</created>
@@ -68,6 +73,9 @@
     </task>
     <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">

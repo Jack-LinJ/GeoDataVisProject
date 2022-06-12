@@ -1,5 +1,5 @@
 // 定义颜色
-var noTwitter_color = 'black';
+var noTwitter_color = 'gray';
 var normal_color = 'rgba(0,191,255,1)';
 var selected_color = '#7b68ee';
 var follow_color = 'rgb(216,82,19)';

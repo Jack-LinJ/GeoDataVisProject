@@ -39,7 +39,7 @@ header h1 {
 
 
 .flag {
-  margin-top: 20px;
+  margin-top: 1vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -48,9 +48,9 @@ header h1 {
 
 .profile {
   width: 100%;
-  height: 400px;
+  height: 25vh;
   display: inline-flex;
-  margin-top: 10px;
+  margin-top: 1vh;
   /* flex-wrap: wrap; */
   /* padding: 5px 10px; */
 }
@@ -65,11 +65,11 @@ header h1 {
   display: flex;
   flex-direction: column;
   margin-left: 15px;
-  font-size: 20px;
+  font-size: 1.7vh;
 }
 
 .profile-content {
-  margin-top: 25px;
+  margin-top: 1.4vh;
 }
 
 
@@ -246,9 +246,9 @@ header h1 {
 }
 
 .title-box {
-  font-size: 25px;
+  font-size: 1vw;
   text-align: center;
-  margin-top: 10px;
+  margin-top: 0.8vh;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -256,24 +256,25 @@ header h1 {
 }
 
 .circle {
-  width: 20px;
-  height: 20px;
+  width: 0.8vw;
+  height: 0.8vw;
   margin-right: 10px;
   border-radius: 50%;
 }
 
 .colorIntro{
-  font-size: 25px;
-  height: 28px;
+  font-size: 0.8vw;
+  height: 2.2vh;
   display:  inline-flex;
-  margin-top: 12px;
+  margin-top: 0.3vw;
+  align-items: center;
 }
 
 .colorBlock{
-  width: 40px;
-  height: 100%;
+  width: 1.6vw;
+  height: 1vw;
   /* background-color: black; */
-  margin-right: 15px;
+  margin-right: 0.6vw;
 }
 
 @-webkit-keyframes star-opacity {
@@ -382,9 +383,9 @@ header h1 {
 }
 
 .btn{
-  font-size: 28px;
-  width: 200px;
-  height: 50px;
+  font-size: 1.1vw;
+  width: 7vw;
+  height: 4vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -397,14 +398,14 @@ header h1 {
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  margin-top: 20px;
-  width: 300px;
+  margin-top: 1.2vh;
+  width: 10vw;
   
 }
 
 .link-container{
-  margin-top: 15px;
-  width: 250px;
+  margin-top: 1vh;
+  width: 8vw;
   display: flex;
   justify-content: space-around;
   align-items: center;

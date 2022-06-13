@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="85346c75-4aef-4387-b0de-0ddd3eadaa1e" name="Changes" comment="test push">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="85346c75-4aef-4387-b0de-0ddd3eadaa1e" name="Changes" comment="查看版本信息">
+      <change beforePath="$PROJECT_DIR$/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +63,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1655005133162</updated>
-      <workItem from="1655037724666" duration="385000" />
+      <workItem from="1655037724666" duration="760000" />
     </task>
     <task id="LOCAL-00001" summary="test push">
       <created>1655035484399</created>
@@ -71,7 +72,14 @@
       <option name="project" value="LOCAL" />
       <updated>1655035484399</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="查看版本信息">
+      <created>1655038187643</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1655038187643</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -90,6 +98,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="test push" />
-    <option name="LAST_COMMIT_MESSAGE" value="test push" />
+    <MESSAGE value="查看版本信息" />
+    <option name="LAST_COMMIT_MESSAGE" value="查看版本信息" />
   </component>
 </project>

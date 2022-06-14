@@ -68,6 +68,7 @@ def read_xlsx_file(filename):
                     "no": 0,
                     "tState": tmpTState,
                     "eigc": 0,
+                    "eigcContinent": [],
                     "continent": tmpContinent,
                     "aveFollow": tmpAveFollow
                 }
@@ -86,7 +87,7 @@ def read_xlsx_file(filename):
             for item in curFollow:
                 # print(item)
                 # 如果curid也在item的follow里，加入mutual
-                if curID in data[item-1]["follow"]:
+                if (curID in data[item-1]["follow"]) and (curID not in data[item-1]["mutualFollower"]):
                     data[curID-1]["mutualFollower"].append(item)
                     data[item-1]["mutualFollower"].append(curID)
                     # 不用移出follow或follower，可以被覆盖,而且便于计算eigc
@@ -97,12 +98,44 @@ def read_xlsx_file(filename):
 
     # 特征向量中心性eigc: eigenvector centrality
     # eigc(item)= sum of item's follower's follower number
+    # 对各洲的影响力 eigcContinent
     for i in range(len(data)):
         if data[i]["tState"] != 0:
             curID = i+1
             curFollower = data[i]["follower"]
+            tmpeigContinent = []
+            eigAfrica = 0
+            eigAsia = 0
+            eigEurope = 0
+            eigNorthAmerica = 0
+            eigSouthAmerica = 0
+            eigOceania = 0
             for item in curFollower:
-                data[i]["eigc"] += len(data[item-1]["follower"])
+                delta=len(data[item-1]["follower"])
+                data[i]["eigc"] += delta
+                if data[item-1]["continent"] == "Africa":
+                    eigAfrica += delta
+                elif data[item-1]["continent"] == "Asia":
+                    eigAsia += delta
+                elif data[item-1]["continent"] == "Europe":
+                    eigEurope += delta
+                elif data[item-1]["continent"] == "North America":
+                    eigNorthAmerica += delta
+                elif data[item-1]["continent"] == "South America":
+                    eigSouthAmerica += delta
+                elif data[item-1]["continent"] == "Oceania":
+                    eigOceania += delta
+            tmpeigContinent.append(eigAfrica)
+            tmpeigContinent.append(eigAsia)
+            tmpeigContinent.append(eigEurope)
+            tmpeigContinent.append(eigNorthAmerica)
+            tmpeigContinent.append(eigSouthAmerica)
+            tmpeigContinent.append(eigOceania)
+            # print(curID, tmpeigContinent)
+            data[i]["eigcContinent"] = tmpeigContinent
+
+
+
 
     # 影响力排名no: rank of eigc
     id2no = []
@@ -132,7 +165,7 @@ def read_xlsx_file(filename):
     aveEurope = 0
     aveNorthAmerica = 0
     aveOceania = 0
-    aveSouthAmerica = 0;
+    aveSouthAmerica = 0
 
     for item in data:
         # 仅讨论有推特且有关注的领导人
